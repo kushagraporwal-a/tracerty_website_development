@@ -5,6 +5,7 @@ import { THEME } from "@/data/theme";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { ArrowDown, Sparkles } from "lucide-react";
+import { openContactUsModal } from "@/utils/contactModal";
 
 export default function Home() {
   const router = useRouter();
@@ -44,7 +45,7 @@ export default function Home() {
         </p>
 
         <div className="flex justify-center">
-          <OutlineButton type="button" className="mb-8">
+          <OutlineButton type="button" className="mb-8" onClick={openContactUsModal}>
             Request a Demo
           </OutlineButton>
         </div>
@@ -229,7 +230,7 @@ export default function Home() {
               <p className="mb-4 text-base font-normal" style={{ color: THEME.colors.textMutedLight }}>
                 {`compliance into a competitive asset`}
               </p>
-              <PrimaryButton type="button">{`Request a Demo`}</PrimaryButton>
+              <PrimaryButton type="button" onClick={openContactUsModal}>{`Request a Demo`}</PrimaryButton>
             </div>
             <div
               className="flex items-start rounded-2xl bg-cover bg-center p-5"
@@ -276,7 +277,7 @@ export default function Home() {
           <PrimaryButton
             type="button"
             className="mx-auto"
-            onClick={() => router.push("/contact-us")}
+            onClick={openContactUsModal}
           >
             {`Request a Demo`}
           </PrimaryButton>

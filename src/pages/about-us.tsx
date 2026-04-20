@@ -5,6 +5,7 @@ import PeopleInfoCards from "@/components/common/PeopleInfoCards";
 import PrimaryButton from "@/components/common/PrimaryButton";
 import { THEME } from "@/data/theme";
 import Image from "next/image";
+import TwoRowFeatureSection from "@/components/common/TwoRowFeatureSection";
 
 const PILL_SHADOW = "0px 4px 6px -4px #0000001A";
 
@@ -135,35 +136,15 @@ export default function AboutUsPage() {
         </div>
       </section>
 
-      <section id="an-intelligent-operating-layer" className="scroll-mt-28 py-16">
-        <div className="grid items-start gap-10 md:grid-cols-5">
-          <div className="md:col-span-2">
-            <div className="relative h-80 w-full overflow-hidden rounded-lg">
-              <Image src={aboutIntroInfo.imageSrc} alt={aboutIntroInfo.imageAlt} fill className="object-cover" />
-            </div>
-          </div>
-
-          <div className="md:col-span-3">
-            <h2 className="mb-8 text-4xl font-bold" style={{ color: "#0E1117" }}>
-              {aboutIntroInfo.heading}
-            </h2>
-
-            {aboutIntroInfo.listItems.map((item) => (
-              <div key={item.title} className="mb-6 flex items-start">
-                <div className="mr-6 mt-1 h-full min-h-20 w-1.5 shrink-0 rounded-full bg-blue-950" />
-                <div>
-                  <h3 className="mb-4 text-base font-bold" style={{ color: "#101828" }}>
-                    {item.title}
-                  </h3>
-                  <p className="text-sm font-normal" style={{ color: "#555555" }}>
-                    {item.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <TwoRowFeatureSection
+          sectionId="an-intelligent-operating-layer"
+          variant="variant1"
+          imageSrc={aboutIntroInfo.imageSrc}
+          imageAlt={aboutIntroInfo.imageAlt}
+          heading={aboutIntroInfo.heading}
+          subheading={aboutIntroInfo.subheading}
+          listItems={aboutIntroInfo.listItems}
+        />
 
       <section id="founding-team" className="mb-16 scroll-mt-28 text-center">
         <div className="mb-4 flex items-center justify-center gap-3">

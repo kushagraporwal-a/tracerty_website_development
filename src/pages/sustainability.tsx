@@ -3,6 +3,7 @@ import InfoBoxesRow from "@/components/common/InfoBoxesRow";
 import TwoRowFeatureSection from "@/components/common/TwoRowFeatureSection";
 import Image from "next/image";
 import { THEME } from "@/data/theme";
+import { openContactUsModal } from "@/utils/contactModal";
 
 const PILL_SHADOW = "0px 4px 6px -4px #0000001A";
 
@@ -187,6 +188,7 @@ export default function SustainabilityPage() {
             <button
               type="button"
               className="rounded-full bg-black px-6 py-3 text-base font-medium text-white transition hover:opacity-90"
+              onClick={openContactUsModal}
             >
               Join the Mission
             </button>
