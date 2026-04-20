@@ -30,7 +30,7 @@ export default function SiteFooter() {
         backgroundColor: THEME.colors.footerBackground,
       }}
     >
-      <div className="mx-4 max-w-7xl md:mx-10 lg:mx-auto">
+      <div className="mx-auto w-full max-w-7xl px-[6vw] min-[1241px]:px-0">
         <div className="mb-4 flex flex-col gap-8 py-4 lg:flex-row lg:items-start lg:justify-between">
           <div className="lg:max-w-sm">
             <Link href="/" aria-label="Go to homepage">

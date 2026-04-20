@@ -64,19 +64,24 @@ export default function Home() {
         style={{ backgroundColor: THEME.colors.backgroundDarkTone }}
       >
         <div className="mx-auto w-4/5">
-          <div className="grid grid-cols-10 items-start gap-8">
-            <div className="col-span-7">
+          <div className="grid grid-cols-1 items-start gap-8 md:grid-cols-10">
+            <div className="col-span-1 md:col-span-7">
               <h2 className="mb-4 text-3xl font-bold text-white">FSMA 204</h2>
               <p className="text-lg font-normal text-white">
                 {`The FDA Food Traceability Rule requires end-to-end traceability across high risk foods, fundamentally changing how the supply chain operates.`}
               </p>
             </div>
-            <div className="col-span-3">
-              <div className="mb-2 flex items-center gap-2">
-                <p className="text-3xl font-bold text-white">AI powered</p>
-                <Sparkles size={26} color={THEME.colors.white} className="-mt-6" fill="white"/>
+            <div className="col-span-1 flex flex-col items-end text-right md:col-span-3">
+              <div className="mb-2 flex items-center justify-end gap-2">
+                <p className="text-2xl font-bold text-white md:text-3xl">AI powered</p>
+                <Sparkles
+                  size={22}
+                  color={THEME.colors.white}
+                  className="-mt-4 md:-mt-6"
+                  fill="white"
+                />
               </div>
-              <p className="text-3xl font-bold text-white">data collection</p>
+              <p className="text-2xl font-bold text-white md:text-3xl">data collection</p>
             </div>
           </div>
         </div>
@@ -84,19 +89,26 @@ export default function Home() {
 
       <section className="mb-16">
         <h2
-          className="flex items-center gap-4 text-5xl font-normal leading-tight lg:text-6xl"
+          className="text-5xl font-normal leading-tight lg:flex lg:items-center lg:gap-4 lg:text-6xl"
           style={{ color: THEME.colors.backgroundDarkTone }}
         >
-          <Image src="/assets/icons/pointer.svg" alt="Pointer icon" width={64} height={64} />
-          <span>
+          <Image
+            src="/assets/icons/pointer.svg"
+            alt="Pointer icon"
+            width={64}
+            height={64}
+            className="mb-4 block lg:mb-0"
+          />
+          <span className="block w-full">
             {`Scaling from a Federal Mandate to an`}
             <br />
             <span className="font-bold">{`Intelligent Food Supply Chain.`}</span>
           </span>
         </h2>
 
-        <div className="mt-8 grid h-[50rem] grid-cols-4 gap-4">
-          <div className="grid h-full grid-rows-[40%_60%] gap-4">
+        <div className="mt-8 overflow-x-auto">
+          <div className="grid h-[50rem] min-w-[1200px] grid-cols-4 gap-4">
+            <div className="grid h-full grid-rows-[40%_60%] gap-4">
             <div
               className="relative overflow-hidden rounded-2xl bg-cover bg-center"
               style={{
@@ -130,7 +142,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="grid h-full grid-rows-[70%_30%] gap-4">
+            <div className="grid h-full grid-rows-[70%_30%] gap-4">
             <div
               className="flex items-start rounded-2xl bg-cover bg-center p-5"
               style={{
@@ -170,7 +182,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="grid h-full grid-rows-[40%_60%] gap-4">
+            <div className="grid h-full grid-rows-[40%_60%] gap-4">
             <div
               className="flex items-start rounded-2xl bg-cover bg-center p-5"
               style={{
@@ -203,7 +215,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="grid h-full grid-rows-[40%_60%] gap-4">
+            <div className="grid h-full grid-rows-[40%_60%] gap-4">
             <div
               className="flex flex-col items-center justify-center rounded-2xl bg-cover bg-center p-5 text-center"
               style={{
@@ -238,13 +250,14 @@ export default function Home() {
                 </p>
               </div>
             </div>
+            </div>
           </div>
         </div>
       </section>
 
       <section className="mb-16 mx-auto w-4/5">
         <div
-          className="flex flex-row flex-wrap items-center gap-10 rounded-2xl px-12 py-6 shadow-lg"
+          className="flex flex-col items-center justify-evenly gap-6 rounded-2xl px-8 py-6 text-center shadow-lg min-[1241px]:flex-row min-[1241px]:flex-wrap min-[1241px]:gap-10 min-[1241px]:px-12 min-[1241px]:text-left"
           style={{
             backgroundColor: THEME.colors.ctaBoxBackground,
           }}
@@ -252,10 +265,19 @@ export default function Home() {
           <p className="text-3xl font-normal" style={{ color: THEME.colors.backgroundDarkTone }}>
             {`Turn compliance into your competitive asset.`}
           </p>
-          <span aria-hidden="true" className="text-3xl font-light" style={{ color: THEME.colors.textSecondary }}>
+          <span
+            aria-hidden="true"
+            className="hidden text-3xl font-light min-[1241px]:block"
+            style={{ color: THEME.colors.textSecondary }}
+          >
             |
           </span>
-          <PrimaryButton type="button" onClick={() => router.push("/contact-us")}>
+          <hr className="my-2 w-full border-t border-slate-300 min-[1241px]:hidden" />
+          <PrimaryButton
+            type="button"
+            className="mx-auto"
+            onClick={() => router.push("/contact-us")}
+          >
             {`Request a Demo`}
           </PrimaryButton>
         </div>
