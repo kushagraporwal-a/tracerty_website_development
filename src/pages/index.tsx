@@ -1,118 +1,265 @@
+import OutlineButton from "@/components/common/OutlineButton";
+import PrimaryButton from "@/components/common/PrimaryButton";
+import SeoHead from "@/components/layout/SeoHead";
+import { THEME } from "@/data/theme";
 import Image from "next/image";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
+import { useRouter } from "next/router";
+import { ArrowDown, Sparkles } from "lucide-react";
 
 export default function Home() {
+  const router = useRouter();
+
   return (
-    <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
-    >
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/pages/index.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <>
+      <SeoHead
+        title="Tracerty | FSMA 204 Compliance Intelligence"
+        description="Bridge the first-mile data gap and turn FSMA 204 compliance into supply chain intelligence with Tracerty."
+        canonicalPath="/"
+      />
+      <section className="mx-4 py-16 md:mx-10 lg:mx-auto">
+        <h1
+          className="mb-8 text-5xl leading-tight lg:text-6xl"
+          style={{ color: THEME.colors.textPrimary }}
+        >
+          <span className="font-bold">FSMA 204</span> Compliance as
+          <br />
+          <span className="font-normal">a Catalyst for Supply Chain Intelligence</span>
+        </h1>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700/10 after:dark:from-sky-900 after:dark:via-[#0141ff]/40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+        <div
+          className="mb-8 h-52 w-full rounded-md bg-cover"
+          style={{
+            backgroundColor: THEME.colors.backgroundTone,
+          }}
+          aria-label="Horizontal animation placeholder"
         />
-      </div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
+        <p
+          className="mb-4 px-4 text-center font-normal md:px-8 lg:px-12"
+          style={{ color: THEME.colors.backgroundDarkTone }}
         >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+          {`Bridge the "First Mile" data gap without disrupting your workflow.`}
+          <strong>{` Tracerty's Zero-Typing AI digitizes field operations in days`}</strong>
+          {`, unifying supply chain operations while turning compliance into a competitive asset for waste avoidance and sustainability.`}
+        </p>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+        <div className="flex justify-center">
+          <OutlineButton type="button" className="mb-8">
+            Request a Demo
+          </OutlineButton>
+        </div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Discover and deploy boilerplate example Next.js&nbsp;projects.
+        <div className="flex justify-center mb-2">
+          <p className="mb-2 text-sm font-normal" style={{ color: THEME.colors.footerMutedText }}>
+            Scroll to explore
           </p>
-        </a>
+        </div>
+        <div className="flex justify-center">
+          <ArrowDown size={18} color={THEME.colors.footerMutedText} />
+        </div>
+      </section>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
+      <section
+        className="relative left-1/2 mb-16 w-screen -translate-x-1/2 py-16"
+        style={{ backgroundColor: THEME.colors.backgroundDarkTone }}
+      >
+        <div className="mx-auto w-4/5">
+          <div className="grid grid-cols-10 items-start gap-8">
+            <div className="col-span-7">
+              <h2 className="mb-4 text-3xl font-bold text-white">FSMA 204</h2>
+              <p className="text-lg font-normal text-white">
+                {`The FDA Food Traceability Rule requires end-to-end traceability across high risk foods, fundamentally changing how the supply chain operates.`}
+              </p>
+            </div>
+            <div className="col-span-3">
+              <div className="mb-2 flex items-center gap-2">
+                <p className="text-3xl font-bold text-white">AI powered</p>
+                <Sparkles size={26} color={THEME.colors.white} className="-mt-6" fill="white"/>
+              </div>
+              <p className="text-3xl font-bold text-white">data collection</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="mb-16">
+        <h2
+          className="flex items-center gap-4 text-5xl font-normal leading-tight lg:text-6xl"
+          style={{ color: THEME.colors.backgroundDarkTone }}
         >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
+          <Image src="/assets/icons/pointer.svg" alt="Pointer icon" width={64} height={64} />
+          <span>
+            {`Scaling from a Federal Mandate to an`}
+            <br />
+            <span className="font-bold">{`Intelligent Food Supply Chain.`}</span>
+          </span>
+        </h2>
+
+        <div className="mt-8 grid h-[50rem] grid-cols-4 gap-4">
+          <div className="grid h-full grid-rows-[40%_60%] gap-4">
+            <div
+              className="relative overflow-hidden rounded-2xl bg-cover bg-center"
+              style={{
+                backgroundColor: THEME.colors.backgroundTone,
+                backgroundImage: "url('/assets/home/image-grid-1.png')",
+              }}
+            >
+              <div
+                className="pointer-events-none absolute inset-0 z-0"
+                style={{ backgroundColor: THEME.homeGrid.box1.overlay }}
+              />
+              <div className="relative z-10 flex h-full flex-col justify-end p-5">
+                <div className="-mx-5 -mb-5 px-5 pb-5" style={{ backgroundImage: THEME.homeGrid.box1.textGradient }}>
+                  <h3 className="mb-2 text-3xl font-bold leading-tight text-white">
+                    {`Automated FSMA 204 Traceability`}
+                  </h3>
+                  <p className="text-base font-normal text-white">
+                    {`Comprehensive compliance tracking for food safety modernization`}
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              className="flex items-start rounded-2xl bg-cover bg-center p-5"
+              style={{
+                backgroundColor: THEME.colors.backgroundTone,
+                backgroundImage: "url('/assets/home/image-grid-5.png')",
+              }}
+            >
+              <h3 className="text-3xl font-bold leading-tight text-white">{`Proactive Risk Management`}</h3>
+            </div>
+          </div>
+
+          <div className="grid h-full grid-rows-[70%_30%] gap-4">
+            <div
+              className="flex items-start rounded-2xl bg-cover bg-center p-5"
+              style={{
+                backgroundColor: THEME.colors.backgroundTone,
+                backgroundImage: "url('/assets/home/image-grid-2.png')",
+              }}
+            >
+              <div>
+                <h3
+                  className="mb-2 text-3xl font-bold leading-tight"
+                  style={{ color: THEME.colors.textPrimary }}
+                >
+                  {`Intelligent`}
+                  <br />
+                  {`Farm & Field Operations`}
+                </h3>
+                <p className="text-base font-normal" style={{ color: THEME.colors.backgroundDarkTone }}>
+                  {`Comprehensive compliance tracking for food safety modernization`}
+                </p>
+              </div>
+            </div>
+            <div
+              className="flex items-start rounded-2xl bg-cover bg-center p-5"
+              style={{
+                backgroundColor: THEME.colors.backgroundTone,
+                backgroundImage: "url('/assets/home/image-grid-6.png')",
+              }}
+            >
+              <div>
+                <h3 className="mb-2 text-3xl font-bold leading-tight text-white">
+                  {`Unifying supply chain operations`}
+                </h3>
+                <p className="text-base font-normal text-white">
+                  {`Comprehensive compliance tracking for food safety modernization`}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid h-full grid-rows-[40%_60%] gap-4">
+            <div
+              className="flex items-start rounded-2xl bg-cover bg-center p-5"
+              style={{
+                backgroundColor: THEME.colors.backgroundTone,
+                backgroundImage: "url('/assets/home/image-grid-2.png')",
+              }}
+            >
+              <div>
+                <h3 className="mb-2 text-3xl font-bold leading-tight text-white">{`Universal Integration`}</h3>
+                <p className="text-base font-normal" style={{ color: THEME.colors.textMutedLight }}>
+                  {`Seamless connectivity across all your systems`}
+                </p>
+              </div>
+            </div>
+            <div
+              className="flex items-end rounded-2xl bg-cover bg-center p-5"
+              style={{
+                backgroundColor: THEME.colors.backgroundTone,
+                backgroundImage: "url('/assets/home/image-grid-7.png')",
+              }}
+            >
+              <div>
+                <h3 className="mb-2 text-3xl font-bold leading-tight text-white">
+                  {`Waste Avoidance and Sustainabilty`}
+                </h3>
+                <p className="text-base font-normal text-white">
+                  {`Comprehensive compliance tracking for food safety modernization`}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid h-full grid-rows-[40%_60%] gap-4">
+            <div
+              className="flex flex-col items-center justify-center rounded-2xl bg-cover bg-center p-5 text-center"
+              style={{
+                backgroundColor: THEME.colors.backgroundTone,
+                backgroundImage: "url('/assets/home/image-grid-2.png')",
+              }}
+            >
+              <h3 className="mb-2 text-3xl font-bold leading-tight text-white">
+                {`Tracerty's "Zero-Typing" AI digitizes field operations in days,`}
+              </h3>
+              <p className="mb-4 text-base font-normal" style={{ color: THEME.colors.textMutedLight }}>
+                {`compliance into a competitive asset`}
+              </p>
+              <PrimaryButton type="button">{`Request a Demo`}</PrimaryButton>
+            </div>
+            <div
+              className="flex items-start rounded-2xl bg-cover bg-center p-5"
+              style={{
+                backgroundColor: THEME.colors.backgroundTone,
+                backgroundImage: "url('/assets/home/image-grid-8.png')",
+              }}
+            >
+              <div>
+                <h3
+                  className="mb-2 text-3xl font-bold leading-tight"
+                  style={{ color: THEME.colors.backgroundDarkTone3 }}
+                >
+                  {`Total Supply Chain Visibliity`}
+                </h3>
+                <p className="text-base font-normal" style={{ color: THEME.colors.backgroundDarkTone3 }}>
+                  {`End-to-end transparency from farm to table`}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="mb-16 mx-auto w-4/5">
+        <div
+          className="flex flex-row flex-wrap items-center gap-10 rounded-2xl px-12 py-6 shadow-lg"
+          style={{
+            backgroundColor: THEME.colors.ctaBoxBackground,
+          }}
+        >
+          <p className="text-3xl font-normal" style={{ color: THEME.colors.backgroundDarkTone }}>
+            {`Turn compliance into your competitive asset.`}
           </p>
-        </a>
-      </div>
-    </main>
+          <span aria-hidden="true" className="text-3xl font-light" style={{ color: THEME.colors.textSecondary }}>
+            |
+          </span>
+          <PrimaryButton type="button" onClick={() => router.push("/contact-us")}>
+            {`Request a Demo`}
+          </PrimaryButton>
+        </div>
+      </section>
+    </>
   );
 }
