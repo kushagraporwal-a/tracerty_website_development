@@ -99,8 +99,8 @@ export default function SiteFooter() {
 
         <div className="py-4">
           <p className="mb-4 text-base font-semibold text-white">Stay Updated</p>
-          <form onSubmit={handleSubmit} className="flex items-start">
-            <div className="mr-1.5 w-full max-w-xs">
+          <form onSubmit={handleSubmit} className="flex flex-col items-start gap-2 sm:flex-row sm:items-start sm:gap-0">
+            <div className="w-full sm:mr-1.5 sm:max-w-xs">
               <input
                 value={email}
                 onChange={(event) => setEmail(event.target.value)}
@@ -114,7 +114,7 @@ export default function SiteFooter() {
                 </p>
               ) : null}
             </div>
-            <PrimaryButton type="submit">Get in Touch</PrimaryButton>
+            <PrimaryButton type="submit" className="w-full sm:w-auto">Get in Touch</PrimaryButton>
           </form>
         </div>
 

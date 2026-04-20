@@ -209,7 +209,7 @@ export default function AboutUsPage() {
 
       <section id="our-journey" className="mb-16 scroll-mt-28">
         <div className="relative h-[420px] w-full overflow-hidden rounded-2xl">
-          <Image src="/assets/aboutUs/journey.png" alt="Our journey" fill className="object-cover" />
+          <Image src="/assets/aboutUs/journey.png" alt="Our journey" fill className="object-contain" />
         </div>
       </section>
 
@@ -229,9 +229,9 @@ export default function AboutUsPage() {
           {`We are seeking visionary engineers and forward-thinking design partners to build the digital fabric of a sustainable future.`}
         </p>
 
-        <div className="flex justify-center gap-4">
-          <PrimaryButton type="button">View Openings</PrimaryButton>
-          <OutlineButton type="button">Become a Design Partner</OutlineButton>
+        <div className="flex flex-col justify-center gap-4 sm:flex-row">
+          <PrimaryButton type="button" className="w-full sm:w-auto">View Openings</PrimaryButton>
+          <OutlineButton type="button" className="w-full sm:w-auto">Become a Design Partner</OutlineButton>
         </div>
       </section>
     </>

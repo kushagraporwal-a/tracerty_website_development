@@ -14,7 +14,7 @@ export default function ContactUsPage() {
       <section className="relative left-1/2 w-screen -translate-x-1/2" style={{ backgroundColor: "#F8F9FB" }}>
         <div className="mx-auto w-full max-w-7xl py-16">
           <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
-            <div className="grid h-fit content-start gap-4 md:grid-cols-2">
+            <div className="grid h-fit content-start gap-4 md:grid-cols-2 p-6 ">
               <div className="p-6">
                 <h1 className="mb-4 text-[40px] font-bold leading-tight" style={{ color: "#131313" }}>
                   {`We'd love to hear from you`}
