@@ -230,8 +230,10 @@ export default function SiteHeader({ onOpenPartnerModal }: SiteHeaderProps) {
                     style={{
                       color:
                         expandedMobileMenu === item.href
+                          || router.pathname === item.href
                           ? THEME.colors.secondaryBlue
                           : THEME.colors.textSecondary,
+                      fontWeight: router.pathname === item.href ? 700 : 400,
                     }}
                     onClick={() =>
                       setExpandedMobileMenu((prev) => (prev === item.href ? null : item.href))
@@ -263,7 +265,10 @@ export default function SiteHeader({ onOpenPartnerModal }: SiteHeaderProps) {
                   key={item.href}
                   href={item.href}
                   className="block px-3 py-3 text-sm"
-                  style={{ color: THEME.colors.textSecondary }}
+                  style={{
+                    color: router.pathname === item.href ? THEME.colors.secondaryBlue : THEME.colors.textSecondary,
+                    fontWeight: router.pathname === item.href ? 700 : 400,
+                  }}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.label}
