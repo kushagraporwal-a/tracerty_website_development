@@ -131,7 +131,7 @@ export default function ResourcesPage() {
 
       <section
         id="latest-from-our-blog"
-        className="relative left-1/2 mb-16 w-screen -translate-x-1/2 scroll-mt-28"
+        className="relative left-1/2 mb-16 w-screen -translate-x-1/2 scroll-mt-28 px-10"
         style={{ backgroundColor: "#F8F9FB" }}
       >
         <div className="mx-auto w-full max-w-7xl" style={{ paddingTop: "60px", paddingBottom: "60px" }}>

@@ -73,7 +73,7 @@ export default function ResourcesFaqSection({ sectionId = "frequently-asked-ques
               key={item.question}
               type="button"
               onClick={() => setOpenIndex(isOpen ? null : index)}
-              className="w-1/2 rounded-xl bg-white p-4 text-left"
+              className="w-full rounded-xl bg-white p-4 text-left lg:w-1/2"
               style={{ boxShadow: isOpen ? "0px 4px 8px 0px #00000026" : "none" }}
               aria-expanded={isOpen}
             >
