@@ -4,6 +4,7 @@ import InfoBoxesRow from "@/components/common/InfoBoxesRow";
 import ResourcesFaqSection from "@/components/common/ResourcesFaqSection";
 import { THEME } from "@/data/theme";
 import Image from "next/image";
+import { useEffect } from "react";
 
 const PILL_SHADOW = "0px 4px 6px -4px #0000001A";
 
@@ -83,6 +84,7 @@ const resourcesOfficialInfo = [
 ];
 
 export default function ResourcesPage() {
+
   return (
     <>
       <SeoHead
