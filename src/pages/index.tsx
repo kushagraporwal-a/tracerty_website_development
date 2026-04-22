@@ -107,7 +107,7 @@ export default function Home() {
           </span>
         </h2>
 
-        <div className="mt-8 overflow-x-auto">
+        <div className="mt-8 overflow-x-auto h-[51rem]">
           <div className="grid h-[50rem] min-w-[1200px] grid-cols-4 gap-4">
             <div className="grid h-full grid-rows-[40%_60%] gap-4">
             <div
@@ -188,7 +188,7 @@ export default function Home() {
               className="flex items-start rounded-2xl bg-cover bg-center p-5"
               style={{
                 backgroundColor: THEME.colors.backgroundTone,
-                backgroundImage: "url('/assets/home/image-grid-2.png')",
+                backgroundImage: "url('/assets/home/image-grid-3.png')",
               }}
             >
               <div>
@@ -221,13 +221,13 @@ export default function Home() {
               className="flex flex-col items-center justify-center rounded-2xl bg-cover bg-center p-5 text-center"
               style={{
                 backgroundColor: THEME.colors.backgroundTone,
-                backgroundImage: "url('/assets/home/image-grid-2.png')",
+                backgroundImage: "url('/assets/home/image-grid-4.png')",
               }}
             >
               <h3 className="mb-2 text-3xl font-bold leading-tight text-white">
                 {`Tracerty's "Zero-Typing" AI digitizes field operations in days,`}
               </h3>
-              <p className="mb-4 text-base font-normal" style={{ color: THEME.colors.textMutedLight }}>
+              <p className="mb-4 text-base font-normal" style={{ color: THEME.colors.white }}>
                 {`compliance into a competitive asset`}
               </p>
               <PrimaryButton type="button" onClick={openContactUsModal}>{`Request a Demo`}</PrimaryButton>
