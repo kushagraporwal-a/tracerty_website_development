@@ -54,13 +54,13 @@ export default function ResourcesFaqSection({ sectionId = "frequently-asked-ques
     <section id={sectionId} className="mb-16 flex scroll-mt-28 flex-col items-center">
       <div className="mb-4 flex items-center justify-center gap-3">
         <span className="h-px w-10" style={{ backgroundColor: THEME.colors.secondaryBlue }} />
-        <h2 className="text-4xl font-bold" style={{ color: "#0E1117" }}>
+        <h2 className="text-4xl font-bold font-oxygen" style={{ color: "#0E1117" }}>
           Frequently Asked Questions
         </h2>
         <span className="h-px w-10" style={{ backgroundColor: THEME.colors.secondaryBlue }} />
       </div>
 
-      <p className="mb-6 text-center text-base font-normal" style={{ color: "#0B1F33" }}>
+      <p className="mb-6 text-center text-base font-normal font-inter" style={{ color: "#0B1F33" }}>
         Everything you need to know about FSMA 204 compliance and Tracerty
       </p>
 
@@ -79,7 +79,7 @@ export default function ResourcesFaqSection({ sectionId = "frequently-asked-ques
             >
               <div className="grid grid-cols-[1fr_auto] items-start gap-3">
                 <div>
-                  <p className="text-lg font-bold" style={{ color: "#101828" }}>
+                  <p className="text-lg font-bold font-oxygen" style={{ color: "#101828" }}>
                     {`${index + 1}. ${item.question}`}
                   </p>
 
@@ -87,7 +87,7 @@ export default function ResourcesFaqSection({ sectionId = "frequently-asked-ques
                     className={`grid transition-all duration-300 ease-out ${isOpen ? "mt-3 grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}
                   >
                     <div className="overflow-hidden">
-                      <p className="text-base font-normal" style={{ color: "#4A5565" }}>
+                      <p className="text-base font-normal font-inter" style={{ color: "#4A5565" }}>
                         {item.answer}
                       </p>
                     </div>

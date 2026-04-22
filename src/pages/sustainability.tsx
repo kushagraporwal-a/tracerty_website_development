@@ -125,17 +125,17 @@ export default function SustainabilityPage() {
               style={{ boxShadow: PILL_SHADOW }}
             >
               <Image src="/assets/icons/pointer.svg" alt="" width={20} height={20} aria-hidden />
-              <span className="text-sm font-bold text-white">Sustainability</span>
+              <span className="text-sm font-bold text-white font-oxygen">Sustainability</span>
             </div>
 
-            <h1 className="text-[40px] font-normal leading-tight text-white">
+            <h1 className="text-[40px] font-normal leading-tight text-white font-oxygen">
               {`Beyond Compliance: `}
             </h1>
-            <h2 className="mb-6 text-[40px] font-bold leading-tight text-white">
+            <h2 className="mb-6 text-[40px] font-bold leading-tight text-white font-oxygen">
             A Healthier Planet Through Precision
             </h2>
 
-            <p className="max-w-3xl text-base font-normal text-white">
+            <p className="max-w-3xl text-base font-normal text-white font-inter">
               {`Moving from estimated "proxies" to primary truth. Tracerty turns lot-level data into a force for waste avoidance, carbon clarity, and ethical transparency.`}
             </p>
           </div>
@@ -167,17 +167,17 @@ export default function SustainabilityPage() {
           <div className="mx-auto flex max-w-5xl flex-col items-center text-center">
             <div className="mb-8 flex items-center gap-3">
               <span className="h-px w-10" style={{ backgroundColor: THEME.colors.secondaryBlue }}/>
-              <h2 className="text-4xl font-bold">
+              <h2 className="text-4xl font-bold font-oxygen">
                 Our Collective Impact
               </h2>
               <span className="h-px w-10" style={{ backgroundColor: THEME.colors.secondaryBlue }}/>
             </div>
 
-            <h3 className="mb-6 text-2xl font-bold" style={{ color: "#101828" }}>
+            <h3 className="mb-6 text-2xl font-bold font-oxygen" style={{ color: "#101828" }}>
               The Objective: A Healthier, Safer Ecosystem.
             </h3>
 
-            <p className="text-base font-normal" style={{ color: "#0B1F33" }}>
+            <p className="text-base font-normal font-inter" style={{ color: "#0B1F33" }}>
               {`The Vision: Our goal is a systemic improvement in how the world feeds itself-a dividend that benefits the environment, public health, and the people who power the first mile.`}
             </p>
           </div>
@@ -187,7 +187,7 @@ export default function SustainabilityPage() {
           <div className="mt-6 flex justify-center">
             <button
               type="button"
-              className="rounded-full bg-black px-6 py-3 text-base font-medium text-white transition hover:opacity-90"
+              className="rounded-full bg-black px-6 py-3 text-base font-medium text-white transition hover:opacity-90 font-oxygen"
               onClick={openContactUsModal}
             >
               Join the Mission

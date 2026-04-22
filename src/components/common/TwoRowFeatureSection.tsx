@@ -50,17 +50,17 @@ export default function TwoRowFeatureSection({
           {eyebrowText && (
             <div className="mb-2 flex items-center gap-2">
               <Image src="/assets/icons/pointer.svg" alt="" width={32} height={32} aria-hidden />
-              <p className="text-2xl font-bold" style={{ color: THEME.colors.backgroundDarkTone3 }}>
+              <p className="text-2xl font-bold font-oxygen" style={{ color: THEME.colors.backgroundDarkTone3 }}>
                 {eyebrowText}
               </p>
             </div>
           )}
 
-          <h2 className="mb-4 text-4xl font-bold leading-tight" style={{ color: THEME.colors.backgroundDarkTone3 }}>
+          <h2 className="mb-4 text-4xl font-bold leading-tight font-oxygen" style={{ color: THEME.colors.backgroundDarkTone3 }}>
             {heading}
           </h2>
 
-          <h3 className="mb-3 text-lg font-semibold" style={{ color: THEME.colors.textPrimary }}>
+          <h3 className="mb-3 text-lg font-semibold font-inter" style={{ color: THEME.colors.textPrimary }}>
             {subheading}
           </h3>
 
@@ -69,8 +69,8 @@ export default function TwoRowFeatureSection({
               <div key={item.title} className="mb-2 flex items-center">
                 <div className="mr-6 mt-1 h-full min-h-14 w-1.5 shrink-0" style={{ backgroundColor: THEME.colors.secondaryBlue }} />
                 <div>
-                  <h4 className="mb-1 text-base font-bold text-slate-900">{item.title}</h4>
-                  <p className="text-sm font-normal" style={{ color: THEME.colors.textSecondary }}>
+                  <h4 className="mb-1 text-base font-bold text-slate-900 font-oxygen">{item.title}</h4>
+                  <p className="text-sm font-normal font-inter" style={{ color: THEME.colors.textSecondary }}>
                     {item.description}
                   </p>
                 </div>
@@ -82,10 +82,10 @@ export default function TwoRowFeatureSection({
 
       {bottomBoxHeading && bottomBoxDescription && (
         <div className="mt-6 rounded-lg p-5" style={{ backgroundColor: "#F2F2F2" }}>
-          <h4 className="text-lg font-bold" style={{ color: THEME.colors.backgroundDarkTone }}>
+          <h4 className="text-lg font-bold font-oxygen" style={{ color: THEME.colors.backgroundDarkTone }}>
             {bottomBoxHeading}
           </h4>
-          <p className="mt-2 text-base font-normal" style={{ color: THEME.colors.backgroundDarkTone }}>
+          <p className="mt-2 text-base font-normal font-inter" style={{ color: THEME.colors.backgroundDarkTone }}>
             {bottomBoxDescription}
           </p>
         </div>

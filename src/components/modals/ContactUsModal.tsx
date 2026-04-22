@@ -87,7 +87,7 @@ export default function ContactUsModal({ isOpen, onClose }: ContactUsModalProps)
         <div className="mb-6 flex items-start justify-center gap-4">
           <div className="flex items-center gap-3">
             <span className="h-px w-10" style={{ backgroundColor: THEME.colors.secondaryBlue }} />
-            <h2 className="text-3xl font-bold sm:text-4xl" style={{ color: "#0E1117" }}>
+            <h2 className="text-3xl font-bold sm:text-4xl font-oxygen" style={{ color: "#0E1117" }}>
               Contact us
             </h2>
             <span className="h-px w-10" style={{ backgroundColor: THEME.colors.secondaryBlue }} />
@@ -97,7 +97,7 @@ export default function ContactUsModal({ isOpen, onClose }: ContactUsModalProps)
         <form className="space-y-5" onSubmit={handleSubmit} noValidate>
           <div className="grid gap-4 md:grid-cols-2">
             <div>
-              <label htmlFor="modal-first-name" className="mb-2 block text-sm font-medium text-slate-700">
+              <label htmlFor="modal-first-name" className="mb-2 block text-sm font-medium text-slate-700 font-oxygen">
                 First name
               </label>
               <input
@@ -111,7 +111,7 @@ export default function ContactUsModal({ isOpen, onClose }: ContactUsModalProps)
               {errors.firstName ? <p className="mt-1 text-xs text-red-600">{errors.firstName}</p> : null}
             </div>
             <div>
-              <label htmlFor="modal-last-name" className="mb-2 block text-sm font-medium text-slate-700">
+              <label htmlFor="modal-last-name" className="mb-2 block text-sm font-medium text-slate-700 font-oxygen">
                 Last name
               </label>
               <input
@@ -127,7 +127,7 @@ export default function ContactUsModal({ isOpen, onClose }: ContactUsModalProps)
           </div>
 
           <div>
-            <label htmlFor="modal-email" className="mb-2 block text-sm font-medium text-slate-700">
+            <label htmlFor="modal-email" className="mb-2 block text-sm font-medium text-slate-700 font-oxygen">
               Email
             </label>
             <input
@@ -142,7 +142,7 @@ export default function ContactUsModal({ isOpen, onClose }: ContactUsModalProps)
           </div>
 
           <div>
-            <label htmlFor="modal-phone-number" className="mb-2 block text-sm font-medium text-slate-700">
+            <label htmlFor="modal-phone-number" className="mb-2 block text-sm font-medium text-slate-700 font-oxygen">
               Phone number
             </label>
             <div className="grid grid-cols-[120px_1fr] overflow-hidden rounded-lg border border-slate-200">
@@ -169,7 +169,7 @@ export default function ContactUsModal({ isOpen, onClose }: ContactUsModalProps)
           </div>
 
           <div>
-            <label htmlFor="modal-message" className="mb-2 block text-sm font-medium text-slate-700">
+            <label htmlFor="modal-message" className="mb-2 block text-sm font-medium text-slate-700 font-oxygen">
               Message
             </label>
             <textarea
@@ -183,14 +183,14 @@ export default function ContactUsModal({ isOpen, onClose }: ContactUsModalProps)
             {errors.message ? <p className="mt-1 text-xs text-red-600">{errors.message}</p> : null}
           </div>
 
-          <label className="flex items-start gap-3 text-base font-normal" style={{ color: "#344054" }}>
+          <label className="flex items-start gap-3 text-base font-normal font-oxygen" style={{ color: "#344054" }}>
             <input
               type="checkbox"
               checked={acceptedPrivacy}
               onChange={(event) => setAcceptedPrivacy(event.target.checked)}
               className="mt-1 h-4 w-4 rounded border-slate-300 text-slate-900"
             />
-            <span>You agree to our friendly privacy policy.</span>
+            <span className="font-oxygen">You agree to our friendly privacy policy.</span>
           </label>
           {errors.privacy ? <p className="-mt-2 text-xs text-red-600">{errors.privacy}</p> : null}
 

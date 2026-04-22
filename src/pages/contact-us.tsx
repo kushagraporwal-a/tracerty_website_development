@@ -16,49 +16,49 @@ export default function ContactUsPage() {
           <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
             <div className="grid h-fit content-start gap-4 md:grid-cols-2 p-6 ">
               <div className="p-6">
-                <h1 className="mb-4 text-[40px] font-bold leading-tight" style={{ color: "#131313" }}>
+                <h1 className="mb-4 text-[40px] font-bold leading-tight font-oxygen" style={{ color: "#131313" }}>
                   {`We'd love to hear from you`}
                 </h1>
-                <p className="text-xl font-normal" style={{ color: "#131313" }}>
+                <p className="text-xl font-normal font-inter" style={{ color: "#131313" }}>
                   Need something cleared up?
                 </p>
               </div>
 
               <article className="rounded-2xl border p-6" style={{ backgroundColor: "#FFFFFF", borderColor: "#EFF4F9" }}>
                 <Image src="/assets/contactUs/info-1.svg" alt="Email icon" width={32} height={32} />
-                <h2 className="mt-6 text-2xl font-bold" style={{ color: "#131313" }}>
+                <h2 className="mt-6 text-2xl font-bold font-oxygen" style={{ color: "#131313" }}>
                   Email
                 </h2>
-                <p className="mt-4 text-xl font-normal" style={{ color: "#131313" }}>
+                <p className="mt-4 text-xl font-normal font-inter" style={{ color: "#131313" }}>
                   Our friendly team is here to help.
                 </p>
-                <a href="mailto:hi@Tracerty.com" className="mt-4 inline-block text-base font-medium" style={{ color: "#0047AB" }}>
+                <a href="mailto:hi@Tracerty.com" className="mt-4 inline-block text-base font-medium font-oxygen" style={{ color: "#0047AB" }}>
                   hi@Tracerty.com
                 </a>
               </article>
 
               <article className="rounded-2xl border p-6" style={{ backgroundColor: "#FFFFFF", borderColor: "#EFF4F9" }}>
                 <Image src="/assets/contactUs/info-2.svg" alt="Phone icon" width={32} height={32} />
-                <h2 className="mt-6 text-2xl font-bold" style={{ color: "#131313" }}>
+                <h2 className="mt-6 text-2xl font-bold font-oxygen" style={{ color: "#131313" }}>
                   Phone
                 </h2>
-                <p className="mt-4 text-xl font-normal" style={{ color: "#131313" }}>
+                <p className="mt-4 text-xl font-normal font-inter" style={{ color: "#131313" }}>
                   Mon-Fri from 8am to 5pm.
                 </p>
-                <a href="tel:+15550000000" className="mt-4 inline-block text-base font-medium" style={{ color: "#0047AB" }}>
+                <a href="tel:+15550000000" className="mt-4 inline-block text-base font-medium font-oxygen" style={{ color: "#0047AB" }}>
                   +1 (555) 000-0000
                 </a>
               </article>
 
               <article className="rounded-2xl border p-6" style={{ backgroundColor: "#FFFFFF", borderColor: "#EFF4F9" }}>
                 <Image src="/assets/contactUs/info-3.svg" alt="Office icon" width={32} height={32} />
-                <h2 className="mt-6 text-2xl font-bold" style={{ color: "#131313" }}>
+                <h2 className="mt-6 text-2xl font-bold font-oxygen" style={{ color: "#131313" }}>
                   Office
                 </h2>
-                <p className="mt-4 text-xl font-normal" style={{ color: "#131313" }}>
+                <p className="mt-4 text-xl font-normal font-inter" style={{ color: "#131313" }}>
                   Come say hello at our office HQ.
                 </p>
-                <a href="#" className="mt-4 inline-block text-base font-medium" style={{ color: "#0047AB" }}>
+                <a href="#" className="mt-4 inline-block text-base font-medium font-oxygen" style={{ color: "#0047AB" }}>
                   California
                 </a>
               </article>
@@ -67,7 +67,7 @@ export default function ContactUsPage() {
             <div className="rounded-[14px] bg-white p-8" style={{ boxShadow: "0px 4px 8px 0px #00000026" }}>
               <div className="mb-8 flex items-center justify-center gap-3">
                 <span className="h-px w-10" style={{ backgroundColor: THEME.colors.secondaryBlue }} />
-                <h2 className="text-4xl font-bold" style={{ color: "#0E1117" }}>
+                <h2 className="text-4xl font-bold font-oxygen" style={{ color: "#0E1117" }}>
                   Contact us
                 </h2>
                 <span className="h-px w-10" style={{ backgroundColor: THEME.colors.secondaryBlue }} />
@@ -76,7 +76,7 @@ export default function ContactUsPage() {
               <form className="space-y-5">
                 <div className="grid gap-4 md:grid-cols-2">
                   <div>
-                    <label htmlFor="firstName" className="mb-2 block text-sm font-medium text-slate-700">
+                    <label htmlFor="firstName" className="mb-2 block text-sm font-medium text-slate-700 font-oxygen">
                       First name
                     </label>
                     <input
@@ -87,7 +87,7 @@ export default function ContactUsPage() {
                     />
                   </div>
                   <div>
-                    <label htmlFor="lastName" className="mb-2 block text-sm font-medium text-slate-700">
+                    <label htmlFor="lastName" className="mb-2 block text-sm font-medium text-slate-700 font-oxygen">
                       Last name
                     </label>
                     <input
@@ -100,7 +100,7 @@ export default function ContactUsPage() {
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="mb-2 block text-sm font-medium text-slate-700">
+                  <label htmlFor="email" className="mb-2 block text-sm font-medium text-slate-700 font-oxygen">
                     Email
                   </label>
                   <input
@@ -112,7 +112,7 @@ export default function ContactUsPage() {
                 </div>
 
                 <div>
-                  <label htmlFor="phoneNumber" className="mb-2 block text-sm font-medium text-slate-700">
+                  <label htmlFor="phoneNumber" className="mb-2 block text-sm font-medium text-slate-700 font-oxygen">
                     Phone number
                   </label>
                   <div className="grid grid-cols-[120px_1fr] overflow-hidden rounded-lg border border-slate-200">
@@ -131,7 +131,7 @@ export default function ContactUsPage() {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="mb-2 block text-sm font-medium text-slate-700">
+                  <label htmlFor="message" className="mb-2 block text-sm font-medium text-slate-700 font-oxygen">
                     Message
                   </label>
                   <textarea
@@ -142,7 +142,7 @@ export default function ContactUsPage() {
                   />
                 </div>
 
-                <label className="flex items-start gap-3 text-base font-normal" style={{ color: "#344054" }}>
+                <label className="flex items-start gap-3 text-base font-normal font-oxygen" style={{ color: "#344054" }}>
                   <input type="checkbox" className="mt-1 h-4 w-4 rounded border-slate-300 text-slate-900" />
                   <span>You agree to our friendly privacy policy.</span>
                 </label>

@@ -119,10 +119,10 @@ export default function DesignPartnerModal({
 
         <div className="grid gap-8 lg:grid-cols-2">
           <div>
-            <h2 className="mb-5 text-4xl font-bold leading-tight text-white lg:text-[40px]">
+            <h2 className="mb-5 text-4xl font-bold leading-tight text-white lg:text-[40px] font-oxygen">
               The Design Partner Program
             </h2>
-            <p className="mb-5 text-lg font-normal text-white lg:text-[20px]">
+            <p className="mb-5 text-lg font-normal text-white lg:text-[20px] font-inter">
               Tracerty is currently in its design phase. We are seeking
               forward-thinking growers, distributors, and retailers to help us
               shape our inaugural platform.
@@ -146,9 +146,9 @@ export default function DesignPartnerModal({
                       height={16}
                       aria-hidden
                     />
-                    <h3 className="text-lg font-bold text-white">{item.title}</h3>
+                    <h3 className="text-lg font-bold text-white font-oxygen">{item.title}</h3>
                   </div>
-                  <p className="text-sm font-normal text-white">
+                  <p className="text-sm font-normal text-white font-inter">
                     {item.description}
                   </p>
                 </article>
@@ -159,7 +159,7 @@ export default function DesignPartnerModal({
           <div>
             <div className="mb-6 flex justify-center items-center gap-3">
               <span className="h-px w-10" style={{ backgroundColor: THEME.colors.textHeadingLight }} />
-              <h3 className="text-4xl font-bold" style={{ color: THEME.colors.textHeadingLight }}>
+              <h3 className="text-4xl font-bold font-oxygen" style={{ color: THEME.colors.textHeadingLight }}>
                 Contact us
               </h3>
               <span className="h-px w-10" style={{ backgroundColor: THEME.colors.textHeadingLight }} />
@@ -170,7 +170,7 @@ export default function DesignPartnerModal({
                 <div>
                   <label
                     htmlFor="partner-first-name"
-                    className="mb-2 block text-sm font-medium"
+                    className="mb-2 block text-sm font-medium font-oxygen"
                     style={{ color: THEME.colors.textLabelMuted }}
                   >
                     First name
@@ -190,7 +190,7 @@ export default function DesignPartnerModal({
                 <div>
                   <label
                     htmlFor="partner-last-name"
-                    className="mb-2 block text-sm font-medium"
+                    className="mb-2 block text-sm font-medium font-oxygen"
                     style={{ color: THEME.colors.textLabelMuted }}
                   >
                     Last name
@@ -212,7 +212,7 @@ export default function DesignPartnerModal({
               <div>
                 <label
                   htmlFor="partner-email"
-                  className="mb-2 block text-sm font-medium"
+                  className="mb-2 block text-sm font-medium font-oxygen"
                   style={{ color: THEME.colors.textLabelMuted }}
                 >
                   Email
@@ -233,7 +233,7 @@ export default function DesignPartnerModal({
               <div>
                 <label
                   htmlFor="partner-phone-number"
-                  className="mb-2 block text-sm font-medium"
+                  className="mb-2 block text-sm font-medium font-oxygen"
                   style={{ color: THEME.colors.textLabelMuted }}
                 >
                   Phone number
@@ -266,7 +266,7 @@ export default function DesignPartnerModal({
               <div>
                 <label
                   htmlFor="partner-message"
-                  className="mb-2 block text-sm font-medium"
+                  className="mb-2 block text-sm font-medium font-oxygen"
                   style={{ color: THEME.colors.textLabelMuted }}
                 >
                   Message
@@ -285,7 +285,7 @@ export default function DesignPartnerModal({
               </div>
 
               <label
-                className="flex items-start gap-3 text-base font-normal"
+                className="flex items-start gap-3 text-base font-normal font-oxygen"
                 style={{ color: THEME.colors.textLabelMuted }}
               >
                 <input

@@ -97,10 +97,10 @@ export default function InfoBoxesRow({
                 height={item.iconHeight ?? 56}
               />
             </div>
-            <h4 className="mb-3 break-words text-xl font-bold" style={{ color: "#101828" }}>
+            <h4 className="mb-3 break-words text-xl font-bold font-oxygen" style={{ color: "#101828" }}>
               {item.title}
             </h4>
-            <p className="break-words text-base font-normal" style={{ color: "#101828" }}>
+            <p className="break-words text-base font-normal font-oxygen" style={{ color: "#101828" }}>
               {item.description}
             </p>
           </div>
@@ -115,7 +115,7 @@ export default function InfoBoxesRow({
               type="button"
               aria-label={`Go to card ${index + 1}`}
               onClick={() => scrollToSlide(index)}
-              className="h-2 w-2 rounded-full transition-colors duration-200"
+              className="h-2 w-2 rounded-full transition-colors duration-200 font-oxygen"
               style={{ backgroundColor: activeSlide === index ? "#0047AB" : "#9CA3AF" }}
             />
           ))}
@@ -140,10 +140,10 @@ export default function InfoBoxesRow({
                 height={item.iconHeight ?? 56}
               />
             </div>
-            <h4 className="mb-3 break-words text-xl font-bold" style={{ color: "#101828" }}>
+            <h4 className="mb-3 break-words text-xl font-bold font-oxygen" style={{ color: "#101828" }}>
               {item.title}
             </h4>
-            <p className="break-words text-base font-normal" style={{ color: "#101828" }}>
+            <p className="break-words text-base font-normal font-oxygen" style={{ color: "#101828" }}>
               {item.description}
             </p>
           </div>

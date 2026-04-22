@@ -128,12 +128,12 @@ export default function AboutUsPage() {
               style={{ boxShadow: PILL_SHADOW }}
             >
               <Image src="/assets/icons/pointer.svg" alt="" width={20} height={20} aria-hidden />
-              <span className="text-sm font-bold text-white">Knowledge Hub</span>
+              <span className="text-sm font-bold text-white font-oxygen">Knowledge Hub</span>
             </div>
 
-            <h1 className="text-[40px] font-normal leading-tight text-white">{`Enterprise Architects for the`}</h1>
-            <h2 className="mb-8 text-[40px] font-bold leading-tight text-white">Global Food Supply Chain</h2>
-            <p className="max-w-3xl text-base font-normal text-white">
+            <h1 className="text-[40px] font-normal leading-tight text-white font-oxygen">{`Enterprise Architects for the`}</h1>
+            <h2 className="mb-8 text-[40px] font-bold leading-tight text-white font-oxygen">Global Food Supply Chain</h2>
+            <p className="max-w-3xl text-base font-normal text-white font-inter">
               {`Led by alumni from Google, Meta, and Amazon, Tracerty is building the intelligence layer required to eliminate systemic waste and secure the future of food.`}
             </p>
           </div>
@@ -153,12 +153,12 @@ export default function AboutUsPage() {
       <section id="founding-team" className="mb-16 scroll-mt-28 text-center">
         <div className="mb-4 flex items-center justify-center gap-3">
           <span className="h-px w-10" style={{ backgroundColor: THEME.colors.secondaryBlue }} />
-          <h2 className="text-4xl font-bold" style={{ color: "#0E1117" }}>
+          <h2 className="text-4xl font-bold font-oxygen" style={{ color: "#0E1117" }}>
             Founding Team
           </h2>
           <span className="h-px w-10" style={{ backgroundColor: THEME.colors.secondaryBlue }} />
         </div>
-        <p className="mx-auto mb-10 max-w-4xl text-base font-normal" style={{ color: "#0B1F33" }}>
+        <p className="mx-auto mb-10 max-w-4xl text-base font-normal font-inter" style={{ color: "#0B1F33" }}>
           {`Industry veterans from Google, Meta, and Amazon building the future of food intelligence`}
         </p>
 
@@ -176,15 +176,15 @@ export default function AboutUsPage() {
         >
           <div className="mb-4 flex items-center justify-center gap-3">
             <span className="h-px w-10" style={{ backgroundColor: THEME.colors.secondaryBlue }} />
-            <h2 className="text-4xl font-bold" style={{ color: "#0E1117" }}>
+            <h2 className="text-4xl font-bold font-oxygen" style={{ color: "#0E1117" }}>
               Our Values
             </h2>
             <span className="h-px w-10" style={{ backgroundColor: THEME.colors.secondaryBlue }} />
           </div>
-          <h3 className="text-2xl font-bold" style={{ color: "#101828" }}>
+          <h3 className="text-2xl font-bold font-oxygen" style={{ color: "#101828" }}>
             The Tracerty Code
           </h3>
-          <p className="mb-8 mt-4 text-base font-normal" style={{ color: "#0B1F33" }}>
+          <p className="mb-8 mt-4 text-base font-normal font-inter" style={{ color: "#0B1F33" }}>
             The principles that guide our technology and partnerships
           </p>
 
@@ -201,16 +201,16 @@ export default function AboutUsPage() {
       <section id="join-the-mission" className="mb-16 scroll-mt-28 text-center">
         <div className="mb-4 flex items-center justify-center gap-3">
           <span className="h-px w-10" style={{ backgroundColor: THEME.colors.secondaryBlue }} />
-          <h2 className="text-4xl font-bold" style={{ color: "#0E1117" }}>
+          <h2 className="text-4xl font-bold font-oxygen" style={{ color: "#0E1117" }}>
             Join the Mission
           </h2>
           <span className="h-px w-10" style={{ backgroundColor: THEME.colors.secondaryBlue }} />
         </div>
 
-        <h3 className="text-4xl font-bold" style={{ color: "#0B1F33" }}>
+        <h3 className="text-4xl font-bold font-oxygen" style={{ color: "#0B1F33" }}>
           The Objective: Talent & Partnership.
         </h3>
-        <p className="mx-auto mb-8 mt-4 max-w-4xl text-base font-normal" style={{ color: "#0B1F33" }}>
+        <p className="mx-auto mb-8 mt-4 max-w-4xl text-base font-normal font-inter" style={{ color: "#0B1F33" }}>
           {`We are seeking visionary engineers and forward-thinking design partners to build the digital fabric of a sustainable future.`}
         </p>
 

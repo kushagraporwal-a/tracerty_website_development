@@ -104,17 +104,17 @@ export default function ResourcesPage() {
               style={{ boxShadow: PILL_SHADOW }}
             >
               <Image src="/assets/icons/pointer.svg" alt="" width={20} height={20} aria-hidden />
-              <span className="text-sm font-bold text-white">Knowledge Hub</span>
+              <span className="text-sm font-bold text-white font-oxygen">Knowledge Hub</span>
             </div>
 
-            <h1 className="text-[40px] font-normal leading-tight text-white">
+            <h1 className="text-[40px] font-normal leading-tight text-white font-oxygen">
               {`FSMA 204 Compliance as a`}
             </h1>
-            <h2 className="mb-6 text-[40px] font-bold leading-tight text-white">
+            <h2 className="mb-6 text-[40px] font-bold leading-tight text-white font-oxygen">
               Catalyst for Supply Chain Intelligence
             </h2>
 
-            <p className="max-w-3xl text-base font-normal text-white">
+            <p className="max-w-3xl text-base font-normal text-white font-inter">
               {`Expert insights and regulatory roadmaps designed to help early partners bridge the "First Mile" data gap and turn compliance into a strategic asset.`}
             </p>
           </div>
@@ -122,10 +122,10 @@ export default function ResourcesPage() {
       </section>
 
       <section id="fsma-204-regulatory-turning-point" className="mb-16 mt-20 scroll-mt-28">
-        <h2 className="mb-4 text-4xl font-bold" style={{ color: "#0E1117" }}>
+        <h2 className="mb-4 text-4xl font-bold font-oxygen" style={{ color: "#0E1117" }}>
           FSMA 204: The Regulatory Turning Point
         </h2>
-        <p className="text-base font-normal" style={{ color: "#0B1F33" }}>
+        <p className="text-base font-normal font-inter" style={{ color: "#0B1F33" }}>
           {`The FDA's FSMA Rule 204 is a federal requirement for market entry. By July 2028, every entity handling items on the Food Traceability List must maintain a digital "Golden Record."`}
         </p>
 
@@ -140,7 +140,7 @@ export default function ResourcesPage() {
         <div className="mx-auto w-full max-w-7xl" style={{ paddingTop: "60px", paddingBottom: "60px" }}>
           <div className="mb-8 flex items-center justify-center gap-3">
             <span className="h-px w-10" style={{ backgroundColor: THEME.colors.secondaryBlue }} />
-            <h2 className="text-4xl font-bold" style={{ color: "#0E1117" }}>
+            <h2 className="text-4xl font-bold font-oxygen" style={{ color: "#0E1117" }}>
               Latest from Our Blog
             </h2>
             <span className="h-px w-10" style={{ backgroundColor: THEME.colors.secondaryBlue }} />
@@ -161,10 +161,10 @@ export default function ResourcesPage() {
           className="mx-auto w-full max-w-7xl text-center"
           style={{ paddingTop: "60px", paddingBottom: "60px" }}
         >
-          <h2 className="mb-4 text-4xl font-bold" style={{ color: "#0E1117" }}>
+          <h2 className="mb-4 text-4xl font-bold font-oxygen" style={{ color: "#0E1117" }}>
             {`Official Regulatory & Industry Resources`}
           </h2>
-          <p className="mb-8 text-base font-normal" style={{ color: "#0B1F33" }}>
+          <p className="mb-8 text-base font-normal font-inter" style={{ color: "#0B1F33" }}>
             Essential external resources for compliance and best practices
           </p>
 
@@ -173,7 +173,7 @@ export default function ResourcesPage() {
           <div className="mt-6 flex justify-center">
             <button
               type="button"
-              className="rounded-full bg-black px-6 py-3 text-base font-medium text-white transition hover:opacity-90"
+              className="rounded-full bg-black px-6 py-3 text-base font-medium text-white transition hover:opacity-90 font-oxygen"
               onClick={() => void router.push("/contact-us")}
             >
               Access Our Internal Compliance Guide

@@ -101,17 +101,17 @@ export default function SolutionsPage() {
               style={{ boxShadow: PILL_SHADOW }}
             >
               <Image src="/assets/icons/pointer.svg" alt="" width={20} height={20} aria-hidden />
-              <span className="text-sm font-bold text-white">Solutions</span>
+              <span className="text-sm font-bold text-white font-oxygen">Solutions</span>
             </div>
 
-            <h1 className="text-[40px] font-normal leading-tight text-white">
+            <h1 className="text-[40px] font-normal leading-tight text-white font-oxygen">
               {`Turning Regulatory Mandates into `}
             </h1>
-            <h2 className="mb-6 text-[40px] font-bold leading-tight text-white">
+            <h2 className="mb-6 text-[40px] font-bold leading-tight text-white font-oxygen">
               Strategic Advantages
             </h2>
 
-            <p className="max-w-3xl text-base font-normal text-white">
+            <p className="max-w-3xl text-base font-normal text-white font-inter">
               {`Building the digital fabric that connects the global food supply chain - transforming mandatory traceability into a catalyst for operational efficiency, safety, and zero waste.`}
             </p>
           </div>

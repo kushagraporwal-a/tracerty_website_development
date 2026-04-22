@@ -104,17 +104,17 @@ export default function ProductsPage() {
             style={{ boxShadow: PILL_SHADOW }}
           >
             <Image src="/assets/icons/pointer.svg" alt="" width={12} height={12} aria-hidden />
-            <span className="text-sm font-bold text-white">Product</span>
+            <span className="text-sm font-bold text-white font-oxygen">Product</span>
           </div>
 
-          <h1 className="text-[40px] font-normal leading-tight text-white">
+          <h1 className="text-[40px] font-normal leading-tight text-white font-oxygen">
             {`The Intelligence Layer for the `}
           </h1>
-          <h2 className="mb-6 text-[40px] font-bold leading-tight text-white">
+          <h2 className="mb-6 text-[40px] font-bold leading-tight text-white font-oxygen">
             Global Food Supply Chain
           </h2>
 
-          <p className="max-w-3xl text-base font-normal text-white">
+          <p className="max-w-3xl text-base font-normal text-white font-inter">
             {`Bridging the first-mile data gap to transform mandatory compliance into a strategic asset for the food ecosystem.`}
           </p>
         </div>
