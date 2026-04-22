@@ -19,7 +19,7 @@ export default function Home() {
       />
       <section className="mx-4 py-16 md:mx-10 lg:mx-auto">
         <h1
-          className="mb-8 text-5xl leading-tight lg:text-6xl"
+          className="mb-10 text-5xl leading-tight lg:text-6xl"
           style={{ color: THEME.colors.textPrimary }}
         >
           <span className="font-bold">FSMA 204</span> Compliance as
@@ -27,13 +27,13 @@ export default function Home() {
           <span className="font-normal">a Catalyst for Supply Chain Intelligence</span>
         </h1>
 
-        <div
-          className="mb-8 h-52 w-full rounded-md bg-cover"
-          style={{
-            backgroundColor: THEME.colors.backgroundTone,
-          }}
-          aria-label="Horizontal animation placeholder"
-        />
+        <div className="mb-10 overflow-x-auto rounded-md">
+          <img
+            src="/assets/home/hero.gif"
+            alt="Tracerty hero animation"
+            className="h-52 w-[980px] max-w-none rounded-md object-cover min-[1241px]:w-full min-[1241px]:max-w-full"
+          />
+        </div>
 
         <p
           className="mb-4 px-4 text-center font-normal md:px-8 lg:px-12"

@@ -6,6 +6,7 @@ import PrimaryButton from "@/components/common/PrimaryButton";
 import { THEME } from "@/data/theme";
 import Image from "next/image";
 import TwoRowFeatureSection from "@/components/common/TwoRowFeatureSection";
+import { useRouter } from "next/router";
 
 const PILL_SHADOW = "0px 4px 6px -4px #0000001A";
 
@@ -106,6 +107,8 @@ const aboutValues = [
 ];
 
 export default function AboutUsPage() {
+  const router = useRouter();
+  
   return (
     <>
       <SeoHead
@@ -211,7 +214,7 @@ export default function AboutUsPage() {
         </p>
 
         <div className="flex flex-col justify-center gap-4 sm:flex-row">
-          <PrimaryButton type="button" className="w-full sm:w-auto">View Openings</PrimaryButton>
+          <PrimaryButton type="button" className="w-full sm:w-auto" onClick={() => void router.push("/contact-us")}>View Openings</PrimaryButton>
           <OutlineButton type="button" className="w-full sm:w-auto">Become a Design Partner</OutlineButton>
         </div>
       </section>

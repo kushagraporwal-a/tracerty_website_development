@@ -4,7 +4,7 @@ import InfoBoxesRow from "@/components/common/InfoBoxesRow";
 import ResourcesFaqSection from "@/components/common/ResourcesFaqSection";
 import { THEME } from "@/data/theme";
 import Image from "next/image";
-import { useEffect } from "react";
+import { useRouter } from "next/router";
 
 const PILL_SHADOW = "0px 4px 6px -4px #0000001A";
 
@@ -84,6 +84,7 @@ const resourcesOfficialInfo = [
 ];
 
 export default function ResourcesPage() {
+  const router = useRouter();
 
   return (
     <>
@@ -173,6 +174,7 @@ export default function ResourcesPage() {
             <button
               type="button"
               className="rounded-full bg-black px-6 py-3 text-base font-medium text-white transition hover:opacity-90"
+              onClick={() => void router.push("/contact-us")}
             >
               Access Our Internal Compliance Guide
             </button>
