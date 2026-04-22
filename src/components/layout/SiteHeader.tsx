@@ -41,7 +41,7 @@ export default function SiteHeader({ onOpenPartnerModal }: SiteHeaderProps) {
     "grid before:invisible before:font-bold before:content-[attr(data-label)] before:row-start-1 before:col-start-1";
 
   const submenuLinkClasses =
-    "block w-full whitespace-nowrap px-4 py-2.5 text-left text-xs font-normal text-[#0E1117] transition-colors duration-150 hover:font-bold hover:text-[#0047AB]";
+    "block w-full whitespace-nowrap px-4 py-2.5 text-left text-xs font-normal text-[#0E1117] transition-colors duration-150 hover:font-bold hover:text-[#0047AB] font-oxygen";
 
   const handleSubmenuClick = (href: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
     const pathOnly = href.split("#")[0];
@@ -71,25 +71,7 @@ export default function SiteHeader({ onOpenPartnerModal }: SiteHeaderProps) {
 
         <nav aria-label="Primary navigation" className="hidden items-center gap-3 min-[1241px]:flex">
           {NAV_LINKS.map((item) =>
-            item.type === "action" ? (
-              <button
-                key={item.label}
-                type="button"
-                onClick={onOpenPartnerModal}
-                className={cn(baseMenuClasses)}
-                onMouseEnter={() => setHoveredItem(item.label)}
-                onMouseLeave={() => setHoveredItem(null)}
-                style={{
-                  color:
-                    hoveredItem === item.label ? THEME.colors.secondaryBlue : THEME.colors.textSecondary,
-                  fontWeight: hoveredItem === item.label ? 700 : 400,
-                }}
-              >
-                <span data-label={item.label} className={stableLabelClasses}>
-                  <span className="row-start-1 col-start-1">{item.label}</span>
-                </span>
-              </button>
-            ) : item.submenu && item.submenu.length > 0 ? (
+            item.type === "action" ? null : item.submenu && item.submenu.length > 0 ? (
               <div
                 key={item.href}
                 className="relative inline-flex shrink-0 flex-col items-stretch"
@@ -118,7 +100,7 @@ export default function SiteHeader({ onOpenPartnerModal }: SiteHeaderProps) {
                   }
                 >
                   <span data-label={item.label} className={stableLabelClasses}>
-                    <span className="row-start-1 col-start-1">{item.label}</span>
+                    <span className="row-start-1 col-start-1 font-oxygen">{item.label}</span>
                   </span>
                 </Link>
 
@@ -169,14 +151,26 @@ export default function SiteHeader({ onOpenPartnerModal }: SiteHeaderProps) {
                 }
               >
                 <span data-label={item.label} className={stableLabelClasses}>
-                  <span className="row-start-1 col-start-1">{item.label}</span>
+                  <span className="row-start-1 col-start-1 font-oxygen">{item.label}</span>
                 </span>
               </Link>
             ),
           )}
         </nav>
 
-        <div className="hidden min-[1241px]:block">
+        <div className="hidden items-center gap-3 min-[1241px]:flex">
+          <button
+            type="button"
+            className="rounded-full border px-6 py-3 text-base font-medium transition hover:opacity-90"
+            style={{
+              borderColor: THEME.colors.secondaryBlue,
+              color: THEME.colors.secondaryBlue,
+              backgroundColor: THEME.colors.white,
+            }}
+            onClick={onOpenPartnerModal}
+          >
+            Become a Partner
+          </button>
           <PrimaryButton type="button" onClick={() => router.push("/contact-us")}>
             Contact Us
           </PrimaryButton>
@@ -209,20 +203,7 @@ export default function SiteHeader({ onOpenPartnerModal }: SiteHeaderProps) {
               className="mx-auto w-full max-w-7xl px-[5vw] py-2 min-[1241px]:px-0"
             >
             {NAV_LINKS.map((item) =>
-              item.type === "action" ? (
-                <button
-                  key={item.label}
-                  type="button"
-                  className="w-full px-3 py-3 text-left text-sm"
-                  style={{ color: THEME.colors.textSecondary }}
-                  onClick={() => {
-                    onOpenPartnerModal();
-                    setMobileMenuOpen(false);
-                  }}
-                >
-                  {item.label}
-                </button>
-              ) : item.submenu && item.submenu.length > 0 ? (
+              item.type === "action" ? null : item.submenu && item.submenu.length > 0 ? (
                 <div key={item.href}>
                   <button
                     type="button"
@@ -275,6 +256,23 @@ export default function SiteHeader({ onOpenPartnerModal }: SiteHeaderProps) {
                 </Link>
               ),
             )}
+
+            <button
+              type="button"
+              className="mt-3 w-full rounded-full border px-6 py-3 text-base font-medium transition hover:opacity-90"
+              style={{
+                borderColor: THEME.colors.secondaryBlue,
+                color: THEME.colors.secondaryBlue,
+                backgroundColor: THEME.colors.white,
+              }}
+              onClick={() => {
+                onOpenPartnerModal();
+                setMobileMenuOpen(false);
+                setExpandedMobileMenu(null);
+              }}
+            >
+              Become a Partner
+            </button>
 
             <PrimaryButton
               type="button"

@@ -12,7 +12,7 @@ export default function PrimaryButton({
   return (
     <button
       {...props}
-      className={`rounded-full px-6 py-3 text-base font-medium transition hover:opacity-90 ${className ?? ""}`}
+      className={`rounded-full px-6 py-3 text-base font-medium transition hover:opacity-90 font-oxygen ${className ?? ""}`}
       style={{
         backgroundColor: THEME.colors.primaryOrange,
         color: THEME.colors.backgroundTone,

@@ -12,7 +12,7 @@ export default function OutlineButton({
   return (
     <button
       {...props}
-      className={`rounded-full border px-6 py-3 text-base font-medium transition hover:opacity-90 ${className ?? ""}`}
+      className={`rounded-full border px-6 py-3 text-base font-medium transition hover:opacity-90 font-oxygen ${className ?? ""}`}
       style={{
         backgroundColor: THEME.colors.white,
         borderColor: THEME.colors.backgroundDarkTone,

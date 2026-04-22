@@ -22,9 +22,9 @@ export default function Home() {
           className="mb-10 text-5xl leading-tight lg:text-6xl"
           style={{ color: THEME.colors.textPrimary }}
         >
-          <span className="font-bold">FSMA 204</span> Compliance as
+          <span className="font-bold font-oxygen">FSMA 204</span> Compliance as
           <br />
-          <span className="font-normal">a Catalyst for Supply Chain Intelligence</span>
+          <span className="font-normal font-oxygen">a Catalyst for Supply Chain Intelligence</span>
         </h1>
 
         <div className="mb-10 overflow-x-auto rounded-md">
@@ -36,7 +36,7 @@ export default function Home() {
         </div>
 
         <p
-          className="mb-4 px-4 text-center font-normal md:px-8 lg:px-12"
+          className="mb-4 px-4 text-center font-normal md:px-8 lg:px-12 font-inter"
           style={{ color: THEME.colors.backgroundDarkTone }}
         >
           {`Bridge the "First Mile" data gap without disrupting your workflow.`}
@@ -51,7 +51,7 @@ export default function Home() {
         </div>
 
         <div className="flex justify-center mb-2">
-          <p className="mb-2 text-sm font-normal" style={{ color: THEME.colors.footerMutedText }}>
+          <p className="mb-2 text-sm font-normal font-inter" style={{ color: THEME.colors.footerMutedText }}>
             Scroll to explore
           </p>
         </div>
@@ -67,14 +67,14 @@ export default function Home() {
         <div className="mx-auto w-4/5">
           <div className="grid grid-cols-1 items-start gap-8 md:grid-cols-10">
             <div className="col-span-1 md:col-span-7">
-              <h2 className="mb-4 text-3xl font-bold text-white">FSMA 204</h2>
-              <p className="text-lg font-normal text-white">
+              <h2 className="mb-4 text-3xl font-bold text-white font-oxygen">FSMA 204</h2>
+              <p className="text-lg font-normal text-white font-inter">
                 {`The FDA Food Traceability Rule requires end-to-end traceability across high risk foods, fundamentally changing how the supply chain operates.`}
               </p>
             </div>
             <div className="col-span-1 flex flex-col items-end text-right md:col-span-3">
               <div className="mb-2 flex items-center justify-end gap-2">
-                <p className="text-2xl font-bold text-white md:text-3xl">AI powered</p>
+                <p className="text-2xl font-bold text-white md:text-3xl font-oxygen">AI powered</p>
                 <Sparkles
                   size={22}
                   color={THEME.colors.white}
@@ -82,7 +82,7 @@ export default function Home() {
                   fill="white"
                 />
               </div>
-              <p className="text-2xl font-bold text-white md:text-3xl">data collection</p>
+              <p className="text-2xl font-bold text-white md:text-3xl font-oxygen">data collection</p>
             </div>
           </div>
         </div>
@@ -100,10 +100,10 @@ export default function Home() {
             height={64}
             className="mb-4 block lg:mb-0"
           />
-          <span className="block w-full">
+          <span className="block w-full font-oxygen">
             {`Scaling from a Federal Mandate to an`}
             <br />
-            <span className="font-bold">{`Intelligent Food Supply Chain.`}</span>
+            <span className="font-bold font-oxygen">{`Intelligent Food Supply Chain.`}</span>
           </span>
         </h2>
 
@@ -123,10 +123,10 @@ export default function Home() {
               />
               <div className="relative z-10 flex h-full flex-col justify-end p-5">
                 <div className="-mx-5 -mb-5 px-5 pb-5" style={{ backgroundImage: THEME.homeGrid.box1.textGradient }}>
-                  <h3 className="mb-2 text-3xl font-bold leading-tight text-white">
+                  <h3 className="mb-2 text-3xl font-bold leading-tight text-white font-oxygen">
                     {`Automated FSMA 204 Traceability`}
                   </h3>
-                  <p className="text-base font-normal text-white">
+                  <p className="text-base font-normal text-white font-inter">
                     {`Comprehensive compliance tracking for food safety modernization`}
                   </p>
                 </div>
@@ -139,7 +139,7 @@ export default function Home() {
                 backgroundImage: "url('/assets/home/image-grid-5.png')",
               }}
             >
-              <h3 className="text-3xl font-bold leading-tight text-white">{`Proactive Risk Management`}</h3>
+              <h3 className="text-3xl font-bold leading-tight text-white font-oxygen">{`Proactive Risk Management`}</h3>
             </div>
           </div>
 
@@ -153,14 +153,14 @@ export default function Home() {
             >
               <div>
                 <h3
-                  className="mb-2 text-3xl font-bold leading-tight"
+                  className="mb-2 text-3xl font-bold leading-tight font-oxygen"
                   style={{ color: THEME.colors.textPrimary }}
                 >
                   {`Intelligent`}
                   <br />
                   {`Farm & Field Operations`}
                 </h3>
-                <p className="text-base font-normal" style={{ color: THEME.colors.backgroundDarkTone }}>
+                <p className="text-base font-normal font-inter" style={{ color: THEME.colors.backgroundDarkTone }}>
                   {`Comprehensive compliance tracking for food safety modernization`}
                 </p>
               </div>
@@ -173,10 +173,10 @@ export default function Home() {
               }}
             >
               <div>
-                <h3 className="mb-2 text-3xl font-bold leading-tight text-white">
+                <h3 className="mb-2 text-3xl font-bold leading-tight text-white font-oxygen">
                   {`Unifying supply chain operations`}
                 </h3>
-                <p className="text-base font-normal text-white">
+                <p className="text-base font-normal text-white font-inter">
                   {`Comprehensive compliance tracking for food safety modernization`}
                 </p>
               </div>
@@ -192,8 +192,8 @@ export default function Home() {
               }}
             >
               <div>
-                <h3 className="mb-2 text-3xl font-bold leading-tight text-white">{`Universal Integration`}</h3>
-                <p className="text-base font-normal" style={{ color: THEME.colors.textMutedLight }}>
+                <h3 className="mb-2 text-3xl font-bold leading-tight text-white font-oxygen">{`Universal Integration`}</h3>
+                <p className="text-base font-normal font-inter" style={{ color: THEME.colors.textMutedLight }}>
                   {`Seamless connectivity across all your systems`}
                 </p>
               </div>
@@ -206,10 +206,10 @@ export default function Home() {
               }}
             >
               <div>
-                <h3 className="mb-2 text-3xl font-bold leading-tight text-white">
+                <h3 className="mb-2 text-3xl font-bold leading-tight text-white font-oxygen">
                   {`Waste Avoidance and Sustainabilty`}
                 </h3>
-                <p className="text-base font-normal text-white">
+                <p className="text-base font-normal text-white font-inter">
                   {`Comprehensive compliance tracking for food safety modernization`}
                 </p>
               </div>
@@ -224,10 +224,10 @@ export default function Home() {
                 backgroundImage: "url('/assets/home/image-grid-4.png')",
               }}
             >
-              <h3 className="mb-2 text-3xl font-bold leading-tight text-white">
+              <h3 className="mb-2 text-3xl font-bold leading-tight text-white font-oxygen">
                 {`Tracerty's "Zero-Typing" AI digitizes field operations in days,`}
               </h3>
-              <p className="mb-4 text-base font-normal" style={{ color: THEME.colors.white }}>
+              <p className="mb-4 text-base font-normal font-inter" style={{ color: THEME.colors.white }}>
                 {`compliance into a competitive asset`}
               </p>
               <PrimaryButton type="button" onClick={openContactUsModal}>{`Request a Demo`}</PrimaryButton>
@@ -241,12 +241,12 @@ export default function Home() {
             >
               <div>
                 <h3
-                  className="mb-2 text-3xl font-bold leading-tight"
+                  className="mb-2 text-3xl font-bold leading-tight font-oxygen"
                   style={{ color: THEME.colors.backgroundDarkTone3 }}
                 >
                   {`Total Supply Chain Visibliity`}
                 </h3>
-                <p className="text-base font-normal" style={{ color: THEME.colors.backgroundDarkTone3 }}>
+                <p className="text-base font-normal font-inter" style={{ color: THEME.colors.backgroundDarkTone3 }}>
                   {`End-to-end transparency from farm to table`}
                 </p>
               </div>
@@ -263,7 +263,7 @@ export default function Home() {
             backgroundColor: THEME.colors.ctaBoxBackground,
           }}
         >
-          <p className="text-3xl font-normal" style={{ color: THEME.colors.backgroundDarkTone }}>
+          <p className="text-3xl font-normal font-oxygen" style={{ color: THEME.colors.backgroundDarkTone }}>
             {`Turn compliance into your competitive asset.`}
           </p>
           <span
