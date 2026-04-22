@@ -3,6 +3,7 @@ import InfoBoxesRow from "@/components/common/InfoBoxesRow";
 import OutlineButton from "@/components/common/OutlineButton";
 import PeopleInfoCards from "@/components/common/PeopleInfoCards";
 import PrimaryButton from "@/components/common/PrimaryButton";
+import { openPartnerModal } from "@/utils/partnerModal";
 import { THEME } from "@/data/theme";
 import Image from "next/image";
 import TwoRowFeatureSection from "@/components/common/TwoRowFeatureSection";
@@ -215,7 +216,13 @@ export default function AboutUsPage() {
 
         <div className="flex flex-col justify-center gap-4 sm:flex-row">
           <PrimaryButton type="button" className="w-full sm:w-auto" onClick={() => void router.push("/contact-us")}>View Openings</PrimaryButton>
-          <OutlineButton type="button" className="w-full sm:w-auto">Become a Design Partner</OutlineButton>
+          <OutlineButton
+            type="button"
+            className="w-full sm:w-auto"
+            onClick={openPartnerModal}
+          >
+            Become a Design Partner
+          </OutlineButton>
         </div>
       </section>
     </>

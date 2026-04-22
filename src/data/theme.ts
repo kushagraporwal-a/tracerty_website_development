@@ -1,13 +1,18 @@
 export const THEME = {
   colors: {
     white: "#FFFFFF",
+    whiteAlpha10: "#FFFFFF1A",
     textPrimary: "#1A1A1A",
     textMutedLight: "#9CA3AF",
     textSecondary: "#555555",
+    textLabelMuted: "#CCCCCC",
+    textHeadingDark: "#101828",
+    textHeadingLight: "#F8F9FB",
     backgroundTone: "#F8F9FB",
     ctaBoxBackground: "#EFF4F9",
     backgroundDarkTone: "#0B1F33",
     backgroundDarkTone3: "#0E1117",
+    modalBackdrop: "rgba(2, 6, 23, 0.7)",
     secondaryBlue: "#0047AB",
     primaryOrange: "#FF6A00",
     shadow: "#00000026",
