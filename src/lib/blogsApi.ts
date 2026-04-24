@@ -12,7 +12,7 @@ export const getBlogs = async ({ page = 1, limit = 10, search = "" }) => {
   const skip = (page - 1) * limit;
 
   const response = await contentfulClient.getEntries({
-    content_type: "blog",
+    content_type: "blogs",
     limit,
     skip,
     order: ["-fields.publishedDate"],
@@ -29,7 +29,7 @@ export const getBlogs = async ({ page = 1, limit = 10, search = "" }) => {
 
 export const getBlogBySlug = async (slug: any) => {
   const response = await contentfulClient.getEntries({
-    content_type: "blog",
+    content_type: "blogs",
     "fields.slug": slug,
     limit: 1,
   });
@@ -37,11 +37,24 @@ export const getBlogBySlug = async (slug: any) => {
   return response.items[0];
 };
 
+export const getBlogByRef = async (blogRef: string) => {
+  const bySlug = await getBlogBySlug(blogRef);
+  if (bySlug) return bySlug;
+
+  try {
+    const byId = await contentfulClient.getEntry(blogRef);
+    if (byId?.sys?.type === "Entry") return byId;
+  } catch {
+    return undefined;
+  }
+
+  return undefined;
+};
+
 export const getLatestBlogs = async () => {
   const response = await contentfulClient.getEntries({
-    content_type: "blog",
+    content_type: "blogs",
     limit: 3,
-    order: ["-fields.publishedDate"],
   });
 
   return response.items;

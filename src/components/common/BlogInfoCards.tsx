@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 type BlogInfoItem = {
   imageSrc: string;
@@ -7,6 +8,7 @@ type BlogInfoItem = {
   tag: string;
   title: string;
   readMoreLabel?: string;
+  slug?: string;
 };
 
 type BlogInfoCardsProps = {
@@ -32,10 +34,21 @@ export default function BlogInfoCards({ items, className }: BlogInfoCardsProps) 
             <h3 className="mb-2 text-xl font-bold break-words" style={{ color: "#101828" }}>
               {item.title}
             </h3>
-            <button type="button" className="inline-flex items-center gap-2 text-base font-normal" style={{ color: "#1A5FCC" }}>
-              <span>{item.readMoreLabel ?? "Read more"}</span>
-              <ArrowRight size={16} />
-            </button>
+            {item.slug ? (
+              <Link
+                href={`/resources/blogs/${item.slug}`}
+                className="inline-flex items-center gap-2 text-base font-normal"
+                style={{ color: "#1A5FCC" }}
+              >
+                <span>{item.readMoreLabel ?? "Read more"}</span>
+                <ArrowRight size={16} />
+              </Link>
+            ) : (
+              <button type="button" className="inline-flex items-center gap-2 text-base font-normal" style={{ color: "#1A5FCC" }}>
+                <span>{item.readMoreLabel ?? "Read more"}</span>
+                <ArrowRight size={16} />
+              </button>
+            )}
           </div>
         </article>
       ))}

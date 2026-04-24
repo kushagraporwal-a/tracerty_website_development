@@ -19,6 +19,8 @@ export const THEME = {
     footerBackground: "#0B1F33",
     footerMutedText: "#717182",
     footerDivider: "#FFFFFF0D",
+    blogTocText: "#1B1B1F",
+    blogTocActiveBorder: "#1A5FCC",
   },
   homeGrid: {
     box1: {

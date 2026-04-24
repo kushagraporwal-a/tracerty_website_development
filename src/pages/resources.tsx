@@ -5,6 +5,8 @@ import ResourcesFaqSection from "@/components/common/ResourcesFaqSection";
 import { THEME } from "@/data/theme";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import type { GetServerSideProps, InferGetServerSidePropsType } from "next";
+import { getLatestBlogs } from "@/lib/blogsApi";
 
 const PILL_SHADOW = "0px 4px 6px -4px #0000001A";
 
@@ -29,6 +31,7 @@ const resourcesRegulatoryInfo = [
   },
 ];
 
+/*
 const resourcesBlogInfo = [
   {
     imageSrc: "/assets/resources/blogInfo-1.png",
@@ -49,6 +52,15 @@ const resourcesBlogInfo = [
     title: "The $1T Dividend: Moving from static records to proactive waste avoidance in the cold chain.",
   },
 ];
+*/
+
+type BlogCardData = {
+  imageSrc: string;
+  imageAlt: string;
+  tag: string;
+  title: string;
+  slug?: string;
+};
 
 const resourcesOfficialInfo = [
   {
@@ -83,7 +95,9 @@ const resourcesOfficialInfo = [
   },
 ];
 
-export default function ResourcesPage() {
+export default function ResourcesPage({
+  resourcesBlogInfo,
+}: InferGetServerSidePropsType<typeof getServerSideProps>) {
   const router = useRouter();
 
   return (
@@ -185,3 +199,40 @@ export default function ResourcesPage() {
     </>
   );
 }
+
+export const getServerSideProps: GetServerSideProps<{
+  resourcesBlogInfo: BlogCardData[];
+}> = async () => {
+  try {
+    const latestBlogs = await getLatestBlogs();
+    console.log("latestBlogs", latestBlogs[0].fields.descriptionStart);
+    const resourcesBlogInfo: BlogCardData[] = latestBlogs.map((blog: any, index: number) => {
+      const imageUrl = blog?.fields?.bannerImage?.fields?.file?.url;
+      const normalizedImageUrl = imageUrl
+        ? imageUrl.startsWith("//")
+          ? `https:${imageUrl}`
+          : imageUrl
+        : `/assets/resources/blogInfo-${(index % 3) + 1}.png`;
+
+      return {
+        imageSrc: normalizedImageUrl,
+        imageAlt: blog?.fields?.title ?? "Resource blog",
+        tag: blog?.fields?.tag ?? "Insights",
+        title: blog?.fields?.title ?? "Untitled blog",
+        slug: blog?.fields?.slug ?? blog?.sys?.id ?? "",
+      };
+    });
+
+    return {
+      props: {
+        resourcesBlogInfo,
+      },
+    };
+  } catch {
+    return {
+      props: {
+        resourcesBlogInfo: [],
+      },
+    };
+  }
+};
