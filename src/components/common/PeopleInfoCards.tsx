@@ -131,7 +131,7 @@ export default function PeopleInfoCards({ items, className }: PeopleInfoCardsPro
         </div>
       )}
 
-      <div className="hidden gap-6 md:grid md:grid-cols-2 xl:grid-cols-5">
+      <div className="hidden gap-6 md:grid md:grid-cols-2 xl:grid-cols-4">
         {items.map((person, index) => (
           <article key={`${person.name}-desktop-${index}`}>
             <div className="relative mb-4 h-[400px] w-full overflow-hidden">

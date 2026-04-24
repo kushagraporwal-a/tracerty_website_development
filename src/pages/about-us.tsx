@@ -69,15 +69,15 @@ const foundingTeam = [
     twitterUrl: "https://x.com/",
     linkedinUrl: "https://www.linkedin.com/",
   },
-  {
-    imageSrc: "/assets/aboutUs/person-5.png",
-    imageAlt: "Jennie",
-    name: "Jennie",
-    designation: "Founding Team",
-    description: "Leads the translation of complex regulatory requirements into intuitive, field-ready user experiences.",
-    twitterUrl: "https://x.com/",
-    linkedinUrl: "https://www.linkedin.com/",
-  },
+  // {
+  //   imageSrc: "/assets/aboutUs/person-5.png",
+  //   imageAlt: "Jennie",
+  //   name: "Jennie",
+  //   designation: "Founding Team",
+  //   description: "Leads the translation of complex regulatory requirements into intuitive, field-ready user experiences.",
+  //   twitterUrl: "https://x.com/",
+  //   linkedinUrl: "https://www.linkedin.com/",
+  // },
 ];
 
 const aboutValues = [
