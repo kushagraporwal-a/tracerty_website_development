@@ -98,26 +98,29 @@ export default function ProductsPage() {
         style={{ backgroundImage: "url('/assets/products/banner.jpg')" }}
       >
         <div className="py-10" style={{ backgroundColor: "rgba(0, 0, 0, 0.5)", backdropFilter: "blur(5px)" }}>
-        <div className="mx-auto flex w-full max-w-7xl flex-col items-center px-4">
-          <div
-            className="mb-7 inline-flex items-center gap-2 bg-transparent py-2 px-4 rounded-full"
-            style={{ boxShadow: PILL_SHADOW }}
-          >
-            <Image src="/assets/icons/pointer.svg" alt="" width={12} height={12} aria-hidden />
-            <span className="text-sm font-bold text-white font-oxygen">Product</span>
+          <div className="mx-auto flex w-full max-w-7xl flex-col items-center px-4">
+            <div
+              className="mb-7 inline-flex h-9 items-center gap-1 rounded-full border border-white/30 px-4 py-2"
+              style={{
+                backgroundColor: "rgba(255, 255, 255, 0.1)",
+                boxShadow: "0px 4px 6px -4px rgba(0, 0, 0, 0.1)",
+              }}
+            >
+              <Image src="/assets/icons/pointer.svg" alt="" width={12} height={12} aria-hidden />
+              <span className="text-sm font-bold text-white font-oxygen">Product</span>
+            </div>
+
+            <h1 className="text-[40px] font-normal leading-tight text-white font-oxygen">
+              {`The Intelligence Layer for the `}
+            </h1>
+            <h2 className="mb-6 text-[40px] font-bold leading-tight text-white font-oxygen">
+              Global Food Supply Chain
+            </h2>
+
+            <p className="max-w-3xl text-base font-normal text-white font-inter">
+              {`Bridging the first-mile data gap to transform mandatory compliance into a strategic asset for the food ecosystem.`}
+            </p>
           </div>
-
-          <h1 className="text-[40px] font-normal leading-tight text-white font-oxygen">
-            {`The Intelligence Layer for the `}
-          </h1>
-          <h2 className="mb-6 text-[40px] font-bold leading-tight text-white font-oxygen">
-            Global Food Supply Chain
-          </h2>
-
-          <p className="max-w-3xl text-base font-normal text-white font-inter">
-            {`Bridging the first-mile data gap to transform mandatory compliance into a strategic asset for the food ecosystem.`}
-          </p>
-        </div>
         </div>
       </section>
 

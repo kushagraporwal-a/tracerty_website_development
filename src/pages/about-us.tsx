@@ -109,7 +109,7 @@ const aboutValues = [
 
 export default function AboutUsPage() {
   const router = useRouter();
-  
+
   return (
     <>
       <SeoHead
@@ -124,8 +124,11 @@ export default function AboutUsPage() {
         <div className="py-10" style={{ backgroundColor: "rgba(0, 0, 0, 0.5)", backdropFilter: "blur(5px)" }}>
           <div className="mx-auto flex w-full max-w-7xl flex-col items-center px-4">
             <div
-              className="mb-16 inline-flex items-center gap-2 rounded-full bg-transparent px-4 py-2"
-              style={{ boxShadow: PILL_SHADOW }}
+              className="mb-7 inline-flex h-9 items-center gap-1 rounded-full border border-white/30 px-4 py-2"
+              style={{
+                backgroundColor: "rgba(255, 255, 255, 0.1)",
+                boxShadow: "0px 4px 6px -4px rgba(0, 0, 0, 0.1)",
+              }}
             >
               <Image src="/assets/icons/pointer.svg" alt="" width={20} height={20} aria-hidden />
               <span className="text-sm font-bold text-white font-oxygen">Knowledge Hub</span>
@@ -141,14 +144,14 @@ export default function AboutUsPage() {
       </section>
 
       <TwoRowFeatureSection
-          sectionId="an-intelligent-operating-layer"
-          variant="variant1"
-          imageSrc={aboutIntroInfo.imageSrc}
-          imageAlt={aboutIntroInfo.imageAlt}
-          heading={aboutIntroInfo.heading}
-          subheading={aboutIntroInfo.subheading}
-          listItems={aboutIntroInfo.listItems}
-        />
+        sectionId="an-intelligent-operating-layer"
+        variant="variant1"
+        imageSrc={aboutIntroInfo.imageSrc}
+        imageAlt={aboutIntroInfo.imageAlt}
+        heading={aboutIntroInfo.heading}
+        subheading={aboutIntroInfo.subheading}
+        listItems={aboutIntroInfo.listItems}
+      />
 
       <section id="founding-team" className="mb-16 scroll-mt-28 text-center">
         <div className="mb-4 flex items-center justify-center gap-3">
@@ -198,31 +201,37 @@ export default function AboutUsPage() {
         </div>
       </section>
 
-      <section id="join-the-mission" className="mb-16 scroll-mt-28 text-center">
-        <div className="mb-4 flex items-center justify-center gap-3">
-          <span className="h-px w-10" style={{ backgroundColor: THEME.colors.secondaryBlue }} />
-          <h2 className="text-4xl font-bold font-oxygen" style={{ color: "#0E1117" }}>
-            Join the Mission
-          </h2>
-          <span className="h-px w-10" style={{ backgroundColor: THEME.colors.secondaryBlue }} />
-        </div>
+      <section
+        id="join-the-mission"
+        className="relative left-1/2 w-screen -translate-x-1/2 scroll-mt-28"
+        style={{ backgroundColor: "#F8F9FB" }}
+      >
+        <div className="mx-auto w-full max-w-7xl px-4 py-12 text-center">
+          <div className="mb-4 flex items-center justify-center gap-3">
+            <span className="h-px w-10" style={{ backgroundColor: THEME.colors.secondaryBlue }} />
+            <h2 className="text-4xl font-bold font-oxygen" style={{ color: "#0E1117" }}>
+              Join the Mission
+            </h2>
+            <span className="h-px w-10" style={{ backgroundColor: THEME.colors.secondaryBlue }} />
+          </div>
 
-        <h3 className="text-4xl font-bold font-oxygen" style={{ color: "#0B1F33" }}>
-          The Objective: Talent & Partnership.
-        </h3>
-        <p className="mx-auto mb-8 mt-4 max-w-4xl text-base font-normal font-inter" style={{ color: "#0B1F33" }}>
-          {`We are seeking visionary engineers and forward-thinking design partners to build the digital fabric of a sustainable future.`}
-        </p>
+          <h3 className="text-4xl font-bold font-oxygen" style={{ color: "#0B1F33" }}>
+            The Objective: Talent & Partnership.
+          </h3>
+          <p className="mx-auto mb-8 mt-4 max-w-4xl text-base font-normal font-inter" style={{ color: "#0B1F33" }}>
+            {`We are seeking visionary engineers and forward-thinking design partners to build the digital fabric of a sustainable future.`}
+          </p>
 
-        <div className="flex flex-col justify-center gap-4 sm:flex-row">
-          <PrimaryButton type="button" className="w-full sm:w-auto" onClick={() => void router.push("/contact-us")}>View Openings</PrimaryButton>
-          <OutlineButton
-            type="button"
-            className="w-full sm:w-auto"
-            onClick={openPartnerModal}
-          >
-            Become a Design Partner
-          </OutlineButton>
+          <div className="flex flex-col justify-center gap-4 sm:flex-row">
+            <PrimaryButton type="button" className="w-full sm:w-auto" onClick={() => void router.push("/contact-us")}>View Openings</PrimaryButton>
+            <OutlineButton
+              type="button"
+              className="w-full sm:w-auto"
+              onClick={openPartnerModal}
+            >
+              Become a Design Partner
+            </OutlineButton>
+          </div>
         </div>
       </section>
     </>

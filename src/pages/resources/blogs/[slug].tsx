@@ -1,5 +1,6 @@
 import SeoHead from "@/components/layout/SeoHead";
-import { getBlogByRef } from "@/lib/blogsApi";
+import BlogInfoCards from "@/components/common/BlogInfoCards";
+import { getBlogByRef, getLatestBlogs } from "@/lib/blogsApi";
 import { THEME } from "@/data/theme";
 import type { ReactNode } from "react";
 import { useEffect, useMemo, useState } from "react";
@@ -20,6 +21,14 @@ type BlogDetailsData = {
   contentImageSrc: string;
   contentImageAlt: string;
   descriptionEnd: unknown;
+};
+
+type BlogCardData = {
+  imageSrc: string;
+  imageAlt: string;
+  tag: string;
+  title: string;
+  slug?: string;
 };
 
 type TocItem = {
@@ -188,6 +197,7 @@ function renderRichText(value: unknown, keyPrefix: string, headingIdCounts: Reco
 
 export default function BlogDetailsPage({
   blog,
+  latestBlogCards,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   const tocItems = useMemo(() => {
     const idCounts: Record<string, number> = {};
@@ -319,12 +329,31 @@ export default function BlogDetailsPage({
           </aside>
         </div>
       </section>
+
+      <section
+        id="latest-from-our-blog"
+        className="relative left-1/2 mb-16 w-screen -translate-x-1/2 scroll-mt-28 px-10"
+        style={{ backgroundColor: "#F8F9FB" }}
+      >
+        <div className="mx-auto w-full max-w-7xl" style={{ paddingTop: "60px", paddingBottom: "60px" }}>
+          <div className="mb-8 flex items-center justify-center gap-3">
+            <span className="h-px w-10" style={{ backgroundColor: THEME.colors.secondaryBlue }} />
+            <h2 className="text-4xl font-bold font-oxygen" style={{ color: "#0E1117" }}>
+              Latest from Our Blog
+            </h2>
+            <span className="h-px w-10" style={{ backgroundColor: THEME.colors.secondaryBlue }} />
+          </div>
+
+          <BlogInfoCards items={latestBlogCards} />
+        </div>
+      </section>
     </>
   );
 }
 
 export const getServerSideProps: GetServerSideProps<{
   blog: BlogDetailsData;
+  latestBlogCards: BlogCardData[];
 }> = async (context) => {
   const slug = getStringField(context.params?.slug);
 
@@ -343,6 +372,23 @@ export const getServerSideProps: GetServerSideProps<{
     const descriptionStart = blogEntry?.fields?.descriptionStart ?? null;
     const descriptionEnd = blogEntry?.fields?.descriptionEnd ?? null;
     const contentImageUrl = blogEntry?.fields?.contentImage?.fields?.file?.url;
+    const latestBlogs = await getLatestBlogs();
+    const latestBlogCards: BlogCardData[] = latestBlogs.map((latestBlog: any, index: number) => {
+      const latestImageUrl = latestBlog?.fields?.bannerImage?.fields?.file?.url;
+      const normalizedLatestImageUrl = latestImageUrl
+        ? latestImageUrl.startsWith("//")
+          ? `https:${latestImageUrl}`
+          : latestImageUrl
+        : `/assets/resources/blogInfo-${(index % 3) + 1}.png`;
+
+      return {
+        imageSrc: normalizedLatestImageUrl,
+        imageAlt: latestBlog?.fields?.title ?? "Resource blog",
+        tag: latestBlog?.fields?.tag ?? "Insights",
+        title: latestBlog?.fields?.title ?? "Untitled blog",
+        slug: latestBlog?.fields?.slug ?? latestBlog?.sys?.id ?? "",
+      };
+    });
 
     return {
       props: {
@@ -359,6 +405,7 @@ export const getServerSideProps: GetServerSideProps<{
           contentImageAlt: getStringField(blogEntry?.fields?.title) || "Blog content image",
           descriptionEnd,
         },
+        latestBlogCards,
       },
     };
   } catch {

@@ -109,7 +109,7 @@ export default function PeopleInfoCards({ items, className }: PeopleInfoCardsPro
                 <Image src="/assets/aboutUs/twitter.svg" alt="Twitter" width={18} height={18} />
               </a>
               <a href={person.linkedinUrl} target="_blank" rel="noreferrer">
-                <Image src="/assets/aboutUs/linkedin.svg" alt="LinkedIn" width={18} height={18} />
+                <Image src="/assets/aboutUs/linkedInIcon.svg" alt="LinkedIn" width={18} height={18} />
               </a>
             </div>
           </article>
@@ -164,7 +164,7 @@ export default function PeopleInfoCards({ items, className }: PeopleInfoCardsPro
                 <Image src="/assets/aboutUs/twitter.svg" alt="Twitter" width={18} height={18} />
               </a>
               <a href={person.linkedinUrl} target="_blank" rel="noreferrer">
-                <Image src="/assets/aboutUs/linkedin.svg" alt="LinkedIn" width={18} height={18} />
+                <Image src="/assets/aboutUs/linkedInIcon.svg" alt="LinkedIn" width={18} height={18} />
               </a>
             </div>
           </article>

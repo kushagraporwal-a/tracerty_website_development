@@ -121,8 +121,11 @@ export default function SustainabilityPage() {
         <div className="py-10" style={{ backgroundColor: "rgba(0, 0, 0, 0.5)", backdropFilter: "blur(5px)" }}>
           <div className="mx-auto flex w-full max-w-7xl flex-col items-center px-4">
             <div
-              className="mb-7 inline-flex items-center gap-2 rounded-full bg-transparent px-4 py-2"
-              style={{ boxShadow: PILL_SHADOW }}
+              className="mb-7 inline-flex h-9 items-center gap-1 rounded-full border border-white/30 px-4 py-2"
+              style={{
+                backgroundColor: "rgba(255, 255, 255, 0.1)",
+                boxShadow: "0px 4px 6px -4px rgba(0, 0, 0, 0.1)",
+              }}
             >
               <Image src="/assets/icons/pointer.svg" alt="" width={20} height={20} aria-hidden />
               <span className="text-sm font-bold text-white font-oxygen">Sustainability</span>
@@ -132,7 +135,7 @@ export default function SustainabilityPage() {
               {`Beyond Compliance: `}
             </h1>
             <h2 className="mb-6 text-[40px] font-bold leading-tight text-white font-oxygen">
-            A Healthier Planet Through Precision
+              A Healthier Planet Through Precision
             </h2>
 
             <p className="max-w-3xl text-base font-normal text-white font-inter">
@@ -166,11 +169,11 @@ export default function SustainabilityPage() {
         <div className="mx-auto w-full max-w-7xl" style={{ paddingTop: "60px", paddingBottom: "60px" }}>
           <div className="mx-auto flex max-w-5xl flex-col items-center text-center">
             <div className="mb-8 flex items-center gap-3">
-              <span className="h-px w-10" style={{ backgroundColor: THEME.colors.secondaryBlue }}/>
+              <span className="h-px w-10" style={{ backgroundColor: THEME.colors.secondaryBlue }} />
               <h2 className="text-4xl font-bold font-oxygen">
                 Our Collective Impact
               </h2>
-              <span className="h-px w-10" style={{ backgroundColor: THEME.colors.secondaryBlue }}/>
+              <span className="h-px w-10" style={{ backgroundColor: THEME.colors.secondaryBlue }} />
             </div>
 
             <h3 className="mb-6 text-2xl font-bold font-oxygen" style={{ color: "#101828" }}>

@@ -64,7 +64,7 @@ export default function ContactUsPage() {
               </article>
             </div>
 
-            <div className="rounded-[14px] bg-white p-8" style={{ boxShadow: "0px 4px 8px 0px #00000026" }}>
+            <div className="mx-4 rounded-[14px] bg-white p-8 md:mx-0" style={{ boxShadow: "0px 4px 8px 0px #00000026" }}>
               <div className="mb-8 flex items-center justify-center gap-3">
                 <span className="h-px w-10" style={{ backgroundColor: THEME.colors.secondaryBlue }} />
                 <h2 className="text-4xl font-bold font-oxygen" style={{ color: "#0E1117" }}>
@@ -115,7 +115,7 @@ export default function ContactUsPage() {
                   <label htmlFor="phoneNumber" className="mb-2 block text-sm font-medium text-slate-700 font-oxygen">
                     Phone number
                   </label>
-                  <div className="grid grid-cols-[120px_1fr] overflow-hidden rounded-lg border border-slate-200">
+                  <div className="grid grid-cols-[92px_1fr] overflow-hidden rounded-lg border border-slate-200 sm:grid-cols-[120px_1fr]">
                     <select className="border-r border-slate-200 bg-white px-3 py-3 text-base text-slate-900 outline-none">
                       <option value="+1">US +1</option>
                       <option value="+91">IN +91</option>

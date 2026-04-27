@@ -16,6 +16,7 @@ type InfoBoxesRowProps = {
   variant?: "default" | "regulatory";
   columns?: 3 | 4;
   className?: string;
+  desktopLayout?: "grid" | "centered";
 };
 
 export default function InfoBoxesRow({
@@ -23,6 +24,7 @@ export default function InfoBoxesRow({
   variant = "default",
   columns = 3,
   className,
+  desktopLayout = "grid",
 }: InfoBoxesRowProps) {
   const isRegulatoryVariant = variant === "regulatory";
   const columnsClass = columns === 4 ? "md:grid-cols-4" : "md:grid-cols-3";
@@ -122,11 +124,19 @@ export default function InfoBoxesRow({
         </div>
       )}
 
-      <div className={`hidden gap-4 md:grid ${columnsClass}`}>
+      <div
+        className={cn(
+          "hidden gap-4 md:flex",
+          desktopLayout === "grid" ? `md:grid ${columnsClass}` : "md:flex md:flex-wrap md:justify-center",
+        )}
+      >
         {items.map((item, index) => (
           <div
             key={`${item.title}-desktop-${index}`}
-            className="rounded-2xl p-8 text-center"
+            className={cn(
+              "rounded-2xl p-8 text-center",
+              desktopLayout === "centered" ? "w-[calc((100%-2rem)/3)] min-w-[240px] max-w-[340px]" : "",
+            )}
             style={{
               backgroundColor: isRegulatoryVariant ? "#FFF3E8" : "#FFFFFF",
               border: isRegulatoryVariant ? "1px solid #FF853333" : "none",
