@@ -4,6 +4,7 @@ import Link from "next/link";
 
 import PrimaryButton from "@/components/common/PrimaryButton";
 import { THEME } from "@/data/theme";
+import { openPartnerModal } from "@/utils/partnerModal";
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -54,7 +55,7 @@ export default function SiteFooter() {
                 <Link href="/about-us" className="block text-sm" style={{ color: THEME.colors.footerMutedText }}>
                   About
                 </Link>
-                <Link href="/industry-insight" className="block text-sm" style={{ color: THEME.colors.footerMutedText }}>
+                <Link href="/resources#latest-from-our-blog" className="block text-sm" style={{ color: THEME.colors.footerMutedText }}>
                   Industry Insight
                 </Link>
               </div>
@@ -63,9 +64,9 @@ export default function SiteFooter() {
             <div>
               <p className="mb-4 text-base font-semibold text-white">Help</p>
               <div className="space-y-2">
-                <Link href="/support" className="block text-sm" style={{ color: THEME.colors.footerMutedText }}>
+                {/* <Link href="/support" className="block text-sm" style={{ color: THEME.colors.footerMutedText }}>
                   Support
-                </Link>
+                </Link> */}
                 <Link href="/terms" className="block text-sm" style={{ color: THEME.colors.footerMutedText }}>
                   Terms
                 </Link>
@@ -78,10 +79,13 @@ export default function SiteFooter() {
             <div>
               <p className="mb-4 text-base font-semibold text-white">Platform</p>
               <div className="space-y-2">
-                <Link href="/system" className="block text-sm" style={{ color: THEME.colors.footerMutedText }}>
+                {/* <Link href="/system" className="block text-sm" style={{ color: THEME.colors.footerMutedText }}>
                   System
-                </Link>
-                <Link href="/partners" className="block text-sm" style={{ color: THEME.colors.footerMutedText }}>
+                </Link> */}
+                <Link href="#" onClick={(event) => {
+                  event.preventDefault();
+                  openPartnerModal();
+                }} className="block text-sm" style={{ color: THEME.colors.footerMutedText }}>
                   Partners
                 </Link>
                 <Link href="/contact-us" className="block text-sm" style={{ color: THEME.colors.footerMutedText }}>
