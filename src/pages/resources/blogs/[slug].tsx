@@ -297,7 +297,7 @@ export default function BlogDetailsPage({
                   className="mb-[10px] text-[20px] font-bold font-oxygen"
                   style={{ color: THEME.colors.blogTocText }}
                 >
-                  In this article
+                  In this Article
                 </h2>
                 <nav aria-label="Table of contents" className="space-y-2">
                   {tocItems.map((item) => (
@@ -309,7 +309,7 @@ export default function BlogDetailsPage({
                         if (!target) return;
                         target.scrollIntoView({ behavior: "smooth", block: "start" });
                       }}
-                      className={`block w-full py-2 text-left text-base font-inter transition ${
+                      className={`block w-full py-2 text-left text-base font-inter transition pl-4 ${
                         activeTocId === item.id ? "font-bold" : "font-normal"
                       }`}
                       style={{
